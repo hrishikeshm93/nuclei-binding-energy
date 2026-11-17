@@ -1,0 +1,3003 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" data-theme="terracotta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Class 12 Physics | Chapter 13: Nuclei Interactive e-Book</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Fraunces (Editorial Display), Plus Jakarta Sans (UI Body), JetBrains Mono (Physics Math) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Fraunces', 'serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* =========================================================
+           5 CURATED DESIGNER COLOR PALETTES (CSS VARIABLE ENGINE)
+           ========================================================= */
+        :root,
+        [data-theme="terracotta"] {
+            --bg-main: #FAF6F0;
+            --bg-pattern: radial-gradient(#D9CFC1 1px, transparent 1px);
+            --bg-surface: #FFFFFF;
+            --bg-elevated: #F3ECE1;
+            --bg-inset: #EDE4D5;
+            --bg-header: rgba(250, 246, 240, 0.92);
+            --text-main: #1C1917;
+            --text-secondary: #44403C;
+            --text-muted: #78716C;
+            --border-color: #E2D9C8;
+            --border-strong: #C8BCA8;
+            --accent-primary: #C84B31;
+            --accent-primary-hover: #A83820;
+            --accent-primary-soft: rgba(200, 75, 49, 0.12);
+            --accent-secondary: #1B6B5B;
+            --accent-secondary-soft: rgba(27, 107, 91, 0.12);
+            --accent-tertiary: #B45309;
+            --accent-tertiary-soft: rgba(180, 83, 9, 0.12);
+            --tab-rail-bg: #EAE0D0;
+            --tab-active-bg: #C84B31;
+            --tab-active-text: #FFFFFF;
+            --tab-inactive-text: #44403C;
+            --tab-hover-bg: rgba(200, 75, 49, 0.1);
+            --canvas-bg: #18181B;
+            --canvas-grid: rgba(255, 255, 255, 0.07);
+            --shadow-card: 0 12px 32px -8px rgba(28, 25, 23, 0.08), 0 4px 12px -2px rgba(28, 25, 23, 0.04);
+        }
+
+        [data-theme="botanical"] {
+            --bg-main: #081C15;
+            --bg-pattern: radial-gradient(#1B4332 1px, transparent 1px);
+            --bg-surface: #112A22;
+            --bg-elevated: #17382D;
+            --bg-inset: #0B211A;
+            --bg-header: rgba(8, 28, 21, 0.92);
+            --text-main: #ECFDF5;
+            --text-secondary: #A7F3D0;
+            --text-muted: #6EE7B7;
+            --border-color: #234E3F;
+            --border-strong: #34755E;
+            --accent-primary: #F59E0B;
+            --accent-primary-hover: #D97706;
+            --accent-primary-soft: rgba(245, 158, 11, 0.16);
+            --accent-secondary: #10B981;
+            --accent-secondary-soft: rgba(16, 185, 129, 0.16);
+            --accent-tertiary: #FB7185;
+            --accent-tertiary-soft: rgba(251, 113, 133, 0.16);
+            --tab-rail-bg: #0D231C;
+            --tab-active-bg: #F59E0B;
+            --tab-active-text: #081C15;
+            --tab-inactive-text: #A7F3D0;
+            --tab-hover-bg: rgba(245, 158, 11, 0.12);
+            --canvas-bg: #061510;
+            --canvas-grid: rgba(167, 243, 208, 0.08);
+            --shadow-card: 0 16px 36px -8px rgba(0, 0, 0, 0.45);
+        }
+
+        [data-theme="cobalt"] {
+            --bg-main: #F0F4F8;
+            --bg-pattern: radial-gradient(#CBD5E1 1px, transparent 1px);
+            --bg-surface: #FFFFFF;
+            --bg-elevated: #E2E8F0;
+            --bg-inset: #D8E2ED;
+            --bg-header: rgba(240, 244, 248, 0.92);
+            --text-main: #0F172A;
+            --text-secondary: #334155;
+            --text-muted: #64748B;
+            --border-color: #CBD5E1;
+            --border-strong: #94A3B8;
+            --accent-primary: #1D4ED8;
+            --accent-primary-hover: #1E40AF;
+            --accent-primary-soft: rgba(29, 78, 216, 0.11);
+            --accent-secondary: #0D9488;
+            --accent-secondary-soft: rgba(13, 148, 136, 0.12);
+            --accent-tertiary: #EA580C;
+            --accent-tertiary-soft: rgba(234, 88, 12, 0.12);
+            --tab-rail-bg: #DCE5F0;
+            --tab-active-bg: #1D4ED8;
+            --tab-active-text: #FFFFFF;
+            --tab-inactive-text: #334155;
+            --tab-hover-bg: rgba(29, 78, 216, 0.1);
+            --canvas-bg: #0F172A;
+            --canvas-grid: rgba(255, 255, 255, 0.08);
+            --shadow-card: 0 12px 28px -6px rgba(15, 23, 42, 0.08);
+        }
+
+        [data-theme="aubergine"] {
+            --bg-main: #1A1025;
+            --bg-pattern: radial-gradient(#3B2354 1px, transparent 1px);
+            --bg-surface: #251736;
+            --bg-elevated: #311E47;
+            --bg-inset: #150C1E;
+            --bg-header: rgba(26, 16, 37, 0.92);
+            --text-main: #FAF5FF;
+            --text-secondary: #E9D5FF;
+            --text-muted: #C084FC;
+            --border-color: #432963;
+            --border-strong: #5E3A8A;
+            --accent-primary: #F43F5E;
+            --accent-primary-hover: #E11D48;
+            --accent-primary-soft: rgba(244, 63, 94, 0.16);
+            --accent-secondary: #2DD4BF;
+            --accent-secondary-soft: rgba(45, 212, 191, 0.16);
+            --accent-tertiary: #FBBF24;
+            --accent-tertiary-soft: rgba(251, 191, 36, 0.16);
+            --tab-rail-bg: #140B1D;
+            --tab-active-bg: #F43F5E;
+            --tab-active-text: #FFFFFF;
+            --tab-inactive-text: #E9D5FF;
+            --tab-hover-bg: rgba(244, 63, 94, 0.15);
+            --canvas-bg: #11091A;
+            --canvas-grid: rgba(233, 213, 255, 0.07);
+            --shadow-card: 0 16px 36px -8px rgba(0, 0, 0, 0.5);
+        }
+
+        [data-theme="cyber"] {
+            --bg-main: #090A0F;
+            --bg-pattern: radial-gradient(#27272A 1px, transparent 1px);
+            --bg-surface: #12141D;
+            --bg-elevated: #1B1E2B;
+            --bg-inset: #0D0E14;
+            --bg-header: rgba(9, 10, 15, 0.92);
+            --text-main: #F8FAFC;
+            --text-secondary: #CBD5E1;
+            --text-muted: #94A3B8;
+            --border-color: #272B3A;
+            --border-strong: #3F465E;
+            --accent-primary: #84CC16;
+            --accent-primary-hover: #65A30D;
+            --accent-primary-soft: rgba(132, 204, 22, 0.15);
+            --accent-secondary: #06B6D4;
+            --accent-secondary-soft: rgba(6, 182, 212, 0.15);
+            --accent-tertiary: #F97316;
+            --accent-tertiary-soft: rgba(249, 115, 22, 0.15);
+            --tab-rail-bg: #151822;
+            --tab-active-bg: #84CC16;
+            --tab-active-text: #090A0F;
+            --tab-inactive-text: #CBD5E1;
+            --tab-hover-bg: rgba(132, 204, 22, 0.14);
+            --canvas-bg: #07080C;
+            --canvas-grid: rgba(132, 204, 22, 0.08);
+            --shadow-card: 0 16px 36px -8px rgba(0, 0, 0, 0.6);
+        }
+
+        /* =========================================================
+           GLOBAL THEME-DRIVEN COMPONENT ARCHITECTURE
+           ========================================================= */
+        body {
+            background-color: var(--bg-main);
+            background-image: var(--bg-pattern);
+            background-size: 24px 24px;
+            color: var(--text-main);
+            min-height: 100vh;
+            transition: background-color 0.35s ease, color 0.35s ease;
+        }
+
+        /* Editorial Surface Cards */
+        .studio-card,
+        .glass-card {
+            background-color: var(--bg-surface);
+            border: 1.5px solid var(--border-color);
+            box-shadow: var(--shadow-card);
+            transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .studio-panel,
+        .glass-panel {
+            background-color: var(--bg-surface);
+            border: 2px solid var(--border-strong);
+            box-shadow: var(--shadow-card);
+            transition: all 0.3s ease;
+        }
+
+        .inset-box {
+            background-color: var(--bg-inset);
+            border: 1px solid var(--border-color);
+        }
+
+        .elevated-box {
+            background-color: var(--bg-elevated);
+            border: 1px solid var(--border-color);
+        }
+
+        .formula-box {
+            background: var(--accent-primary-soft);
+            border: 1.5px solid var(--accent-primary);
+            border-left: 6px solid var(--accent-primary);
+        }
+
+        .ncert-example {
+            background: var(--accent-secondary-soft);
+            border: 1.5px solid var(--accent-secondary);
+            border-left: 6px solid var(--accent-secondary);
+        }
+
+        /* Harmonize legacy Tailwind text & surface utility classes with active theme */
+        [data-theme="terracotta"] .text-white,
+        [data-theme="cobalt"] .text-white {
+            color: var(--text-main) !important;
+        }
+        [data-theme="terracotta"] .text-slate-200,
+        [data-theme="terracotta"] .text-slate-300,
+        [data-theme="cobalt"] .text-slate-200,
+        [data-theme="cobalt"] .text-slate-300 {
+            color: var(--text-secondary) !important;
+        }
+        [data-theme="terracotta"] .text-slate-400,
+        [data-theme="cobalt"] .text-slate-400 {
+            color: var(--text-muted) !important;
+        }
+        [data-theme="terracotta"] .bg-slate-900,
+        [data-theme="terracotta"] .bg-slate-900\/90,
+        [data-theme="terracotta"] .bg-slate-900\/95,
+        [data-theme="cobalt"] .bg-slate-900,
+        [data-theme="cobalt"] .bg-slate-900\/90,
+        [data-theme="cobalt"] .bg-slate-900\/95 {
+            background-color: var(--bg-elevated) !important;
+            border-color: var(--border-color) !important;
+        }
+        [data-theme="terracotta"] .bg-slate-950,
+        [data-theme="terracotta"] .bg-slate-950\/90,
+        [data-theme="cobalt"] .bg-slate-950,
+        [data-theme="cobalt"] .bg-slate-950\/90 {
+            background-color: var(--bg-inset) !important;
+            border-color: var(--border-strong) !important;
+        }
+        [data-theme="terracotta"] .bg-slate-800,
+        [data-theme="cobalt"] .bg-slate-800 {
+            background-color: var(--bg-inset) !important;
+            color: var(--text-main) !important;
+            border: 1px solid var(--border-strong) !important;
+        }
+        /* Keep Simulation Canvas Frames Rich Dark for High-Contrast Physics Optics */
+        .canvas-stage {
+            background-color: var(--canvas-bg) !important;
+            border: 2px solid var(--border-strong) !important;
+        }
+
+        /* High-Contrast Text Accents in Light Themes */
+        [data-theme="terracotta"] .text-sky-300,
+        [data-theme="terracotta"] .text-sky-400,
+        [data-theme="cobalt"] .text-sky-300,
+        [data-theme="cobalt"] .text-sky-400 {
+            color: #0369A1 !important;
+        }
+        [data-theme="terracotta"] .text-amber-300,
+        [data-theme="terracotta"] .text-amber-400,
+        [data-theme="cobalt"] .text-amber-300,
+        [data-theme="cobalt"] .text-amber-400 {
+            color: #B45309 !important;
+        }
+        [data-theme="terracotta"] .text-emerald-300,
+        [data-theme="terracotta"] .text-emerald-400,
+        [data-theme="cobalt"] .text-emerald-300,
+        [data-theme="cobalt"] .text-emerald-400 {
+            color: #047857 !important;
+        }
+        [data-theme="terracotta"] .text-rose-300,
+        [data-theme="terracotta"] .text-rose-400,
+        [data-theme="cobalt"] .text-rose-300,
+        [data-theme="cobalt"] .text-rose-400 {
+            color: #BE123C !important;
+        }
+        [data-theme="terracotta"] .text-indigo-300,
+        [data-theme="terracotta"] .text-purple-300,
+        [data-theme="cobalt"] .text-indigo-300,
+        [data-theme="cobalt"] .text-purple-300 {
+            color: #4338CA !important;
+        }
+        [data-theme="terracotta"] .bg-indigo-950\/60,
+        [data-theme="cobalt"] .bg-indigo-950\/60 {
+            background-color: var(--accent-secondary-soft) !important;
+            border-color: var(--accent-secondary) !important;
+        }
+
+        /* Redesigned Segmented Selection Tabs */
+        .nav-rail {
+            background-color: var(--tab-rail-bg);
+            border: 1.5px solid var(--border-strong);
+            padding: 6px;
+            border-radius: 20px;
+        }
+        .tab-btn {
+            position: relative;
+            color: var(--tab-inactive-text);
+            border-radius: 14px;
+            padding: 10px 16px;
+            font-weight: 700;
+            font-size: 0.84rem;
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            border: 1.5px solid transparent;
+        }
+        .tab-btn:hover:not(.active-tab) {
+            background-color: var(--tab-hover-bg);
+            transform: translateY(-1px);
+        }
+        .tab-btn.active-tab {
+            background-color: var(--tab-active-bg) !important;
+            color: var(--tab-active-text) !important;
+            box-shadow: 0 6px 18px -3px rgba(0, 0, 0, 0.22);
+            transform: translateY(-1px);
+        }
+        .tab-step-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 22px;
+            height: 22px;
+            border-radius: 7px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72rem;
+            font-weight: 800;
+            background: rgba(0, 0, 0, 0.14);
+        }
+        .tab-btn.active-tab .tab-step-badge {
+            background: rgba(255, 255, 255, 0.24);
+            color: inherit;
+        }
+
+        /* Palette Swatch Pill Buttons */
+        .swatch-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 10px;
+            border-radius: 999px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            border: 1.5px solid var(--border-color);
+            background-color: var(--bg-surface);
+            color: var(--text-secondary);
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+        .swatch-btn:hover {
+            border-color: var(--accent-primary);
+            transform: translateY(-1px);
+        }
+        .swatch-btn.active-swatch {
+            border-color: var(--accent-primary);
+            background-color: var(--accent-primary-soft);
+            color: var(--text-main);
+            box-shadow: 0 0 0 2px var(--accent-primary-soft);
+        }
+
+        /* Tab Content Transitions */
+        .tab-content {
+            display: none;
+            animation: slideReveal 0.38s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .tab-content.active {
+            display: block;
+        }
+        @keyframes slideReveal {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Custom Range Slider */
+        input[type="range"] {
+            -webkit-appearance: none;
+            appearance: none;
+            background: transparent;
+            cursor: pointer;
+        }
+        input[type="range"]::-webkit-slider-runnable-track {
+            height: 8px;
+            border-radius: 999px;
+            background: var(--border-strong);
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: var(--accent-primary);
+            border: 3px solid #ffffff;
+            margin-top: -7px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.15s ease;
+        }
+        input[type="range"]::-webkit-slider-thumb:hover {
+            transform: scale(1.15);
+        }
+
+        .math-frac {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            vertical-align: middle;
+            margin: 0 4px;
+        }
+        .math-frac > span:first-child {
+            border-bottom: 1.5px solid currentColor;
+            padding: 0 4px 1px;
+        }
+        .math-frac > span:last-child {
+            padding: 1px 4px 0;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <!-- =========================================================
+         BESPOKE EDITORIAL HEADER, CREATOR STUDIO BADGE & PALETTE SWITCHER
+         ========================================================= -->
+    <header class="sticky top-0 z-50 backdrop-blur-xl border-b transition-colors" style="background-color: var(--bg-header); border-color: var(--border-color);">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5">
+            <!-- Top Row: Brand Identity + Theme Palette Studio + Author Card -->
+            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3.5">
+                
+                <!-- Left: Editorial Emblem & Title -->
+                <div class="flex items-center gap-3.5">
+                    <div class="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 shadow-md border"
+                         style="background-color: var(--accent-primary); color: var(--tab-active-text); border-color: rgba(255,255,255,0.2);">
+                        <i class="fa-solid fa-atom text-2xl animate-spin" style="animation-duration: 14s;"></i>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap items-center gap-2">
+                            <span class="px-2.5 py-0.5 text-[11px] font-extrabold uppercase tracking-widest rounded-md"
+                                  style="background-color: var(--accent-primary-soft); color: var(--accent-primary);">
+                                NCERT Class 12 Physics
+                            </span>
+                            <span class="px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-wider rounded-md"
+                                  style="background-color: var(--accent-secondary-soft); color: var(--accent-secondary);">
+                                Chapter 13 • Nuclei (13.3 &amp; 13.4)
+                            </span>
+                        </div>
+                        <h1 class="font-display text-xl sm:text-2xl font-bold tracking-tight mt-0.5" style="color: var(--text-main);">
+                            Nuclei: Size, Mass–Energy &amp; Binding Curve
+                        </h1>
+                    </div>
+                </div>
+
+                <!-- Right: Interactive Color Palette Switcher & Educator Attribution -->
+                <div class="flex flex-wrap items-center gap-3">
+                    <!-- Color Palette Studio Bar -->
+                    <div class="elevated-box px-3 py-2 rounded-2xl flex flex-wrap items-center gap-1.5">
+                        <span class="text-[11px] font-extrabold uppercase tracking-wider mr-1 flex items-center gap-1" style="color: var(--text-muted);">
+                            <i class="fa-solid fa-palette" style="color: var(--accent-primary);"></i> Palette:
+                        </span>
+                        <button onclick="setThemePalette('terracotta')" id="swatch-terracotta" class="swatch-btn active-swatch" title="Warm Ivory & Terracotta Studio">
+                            <span class="w-3 h-3 rounded-full inline-block border border-black/20" style="background: linear-gradient(135deg, #FAF6F0 45%, #C84B31 55%);"></span>
+                            <span>Terracotta</span>
+                        </button>
+                        <button onclick="setThemePalette('botanical')" id="swatch-botanical" class="swatch-btn" title="Nordic Botanical & Sunlit Gold">
+                            <span class="w-3 h-3 rounded-full inline-block border border-white/20" style="background: linear-gradient(135deg, #081C15 45%, #F59E0B 55%);"></span>
+                            <span>Botanical</span>
+                        </button>
+                        <button onclick="setThemePalette('cobalt')" id="swatch-cobalt" class="swatch-btn" title="Academic Daylight & Cobalt">
+                            <span class="w-3 h-3 rounded-full inline-block border border-black/20" style="background: linear-gradient(135deg, #F0F4F8 45%, #1D4ED8 55%);"></span>
+                            <span>Cobalt</span>
+                        </button>
+                        <button onclick="setThemePalette('aubergine')" id="swatch-aubergine" class="swatch-btn" title="Royal Aubergine & Rose Coral">
+                            <span class="w-3 h-3 rounded-full inline-block border border-white/20" style="background: linear-gradient(135deg, #1A1025 45%, #F43F5E 55%);"></span>
+                            <span>Aubergine</span>
+                        </button>
+                        <button onclick="setThemePalette('cyber')" id="swatch-cyber" class="swatch-btn" title="Cyber Obsidian & Neon Lime">
+                            <span class="w-3 h-3 rounded-full inline-block border border-white/20" style="background: linear-gradient(135deg, #090A0F 45%, #84CC16 55%);"></span>
+                            <span>Obsidian</span>
+                        </button>
+                    </div>
+
+                    <!-- Educator Attribution Badge -->
+                    <div class="studio-card px-3.5 py-2 rounded-2xl flex items-center gap-2.5">
+                        <div class="w-8 h-8 rounded-xl flex items-center justify-center font-mono font-extrabold text-xs shadow-sm"
+                             style="background-color: var(--accent-secondary); color: #ffffff;">
+                            HM
+                        </div>
+                        <div class="text-xs leading-tight">
+                            <p class="text-[10px] font-bold uppercase tracking-wider" style="color: var(--text-muted);">Curated &amp; Designed By</p>
+                            <p class="font-extrabold text-xs sm:text-sm" style="color: var(--text-main);">
+                                Hrishikesh M <span class="font-semibold" style="color: var(--accent-primary);">(PGT Physics)</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Redesigned Segmented Dock Selection Tabs -->
+            <nav class="mt-3.5 nav-rail flex items-center gap-1.5 overflow-x-auto no-scrollbar" aria-label="E-Book Chapter Steps">
+                <button onclick="switchTab('tab-size')" id="btn-tab-size" class="tab-btn active-tab flex items-center gap-2 shrink-0">
+                    <span class="tab-step-badge">01</span>
+                    <i class="fa-solid fa-ruler-combined"></i>
+                    <span>Size of Nucleus</span>
+                </button>
+                <button onclick="switchTab('tab-mass')" id="btn-tab-mass" class="tab-btn flex items-center gap-2 shrink-0">
+                    <span class="tab-step-badge">02</span>
+                    <i class="fa-solid fa-bolt-lightning"></i>
+                    <span>Mass–Energy (E=mc²)</span>
+                </button>
+                <button onclick="switchTab('tab-binding')" id="btn-tab-binding" class="tab-btn flex items-center gap-2 shrink-0">
+                    <span class="tab-step-badge">03</span>
+                    <i class="fa-solid fa-scale-balanced"></i>
+                    <span>Binding Energy &amp; ΔM</span>
+                </button>
+                <button onclick="switchTab('tab-curve')" id="btn-tab-curve" class="tab-btn flex items-center gap-2 shrink-0">
+                    <span class="tab-step-badge">04</span>
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Binding Energy Curve</span>
+                </button>
+                <button onclick="switchTab('tab-practice')" id="btn-tab-practice" class="tab-btn flex items-center gap-2 shrink-0">
+                    <span class="tab-step-badge">05</span>
+                    <i class="fa-solid fa-calculator"></i>
+                    <span>5 Numericals Lab</span>
+                </button>
+                <button onclick="switchTab('tab-quiz')" id="btn-tab-quiz" class="tab-btn flex items-center gap-2 shrink-0 ml-auto">
+                    <span class="tab-step-badge">06</span>
+                    <i class="fa-solid fa-trophy"></i>
+                    <span>5-MCQ Arena</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+
+        <!-- ==========================================
+             TAB 1: 13.3 SIZE OF THE NUCLEUS
+             ========================================== -->
+        <section id="tab-size" class="tab-content active space-y-8">
+            <!-- Hero Section Banner -->
+            <div class="glass-card rounded-3xl p-6 sm:p-8 relative overflow-hidden">
+                <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                    <div class="space-y-3 max-w-3xl">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/20 border border-sky-400/30 text-sky-300 text-xs font-bold uppercase tracking-wider">
+                            <i class="fa-solid fa-book-open"></i> NCERT Section 13.3 • Step 01
+                        </div>
+                        <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-white">
+                            13.3 Size of the Nucleus
+                        </h2>
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                            How did physicists measure something a hundred thousand times smaller than an atom? Let us explore Rutherford's pioneer postulate, Geiger and Marsden's <span class="text-sky-300 font-semibold">&alpha;-particle scattering</span>, fast-electron bombardment, and the remarkable discovery that <span class="text-amber-300 font-semibold">all nuclei have the same constant density!</span>
+                        </p>
+                    </div>
+                    <div class="formula-box p-5 rounded-2xl shrink-0 text-center min-w-[240px]">
+                        <p class="text-xs uppercase tracking-widest text-sky-300 font-bold mb-1">Key Relation (Eq. 13.5)</p>
+                        <p class="font-mono text-2xl sm:text-3xl font-extrabold text-white">
+                            R = R<sub>0</sub> A<sup>1/3</sup>
+                        </p>
+                        <p class="text-xs text-slate-300 mt-2 font-mono">
+                            R<sub>0</sub> = 1.2 &times; 10<sup>&minus;15</sup> m = 1.2 fm
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conceptual Breakdown Grid (Based on Image 1) -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- Card 1: Alpha Scattering & Closest Approach -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border-t-4 border-t-sky-400">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="w-10 h-10 rounded-xl bg-sky-500/20 text-sky-400 flex items-center justify-center font-bold text-lg">
+                                <i class="fa-solid fa-bullseye"></i>
+                            </span>
+                            <span class="text-xs font-mono uppercase px-2.5 py-1 bg-slate-800 rounded-lg text-slate-300">Geiger–Marsden Expt</span>
+                        </div>
+                        <h3 class="font-display text-lg font-bold text-white">1. Distance of Closest Approach</h3>
+                        <p class="text-sm text-slate-300 leading-relaxed">
+                            Rutherford was the pioneer who postulated and established the existence of the atomic nucleus. At his suggestion, Geiger and Marsden performed their classic experiment on the scattering of <strong class="text-white">&alpha;-particles from thin gold foils</strong>.
+                        </p>
+                        <div class="bg-slate-900/90 p-3.5 rounded-xl border border-slate-700/80 text-xs space-y-1.5">
+                            <p class="text-sky-300 font-semibold"><i class="fa-solid fa-circle-check mr-1"></i> Key Experimental Fact:</p>
+                            <p class="text-slate-200">
+                                For an &alpha;-particle of kinetic energy <span class="font-mono font-bold text-amber-300">5.5 MeV</span> approaching a gold nucleus, the distance of closest approach is about <span class="font-mono font-bold text-emerald-300">4.0 &times; 10<sup>&minus;14</sup> m</span>.
+                            </p>
+                            <p class="text-slate-400">
+                                Since pure Coulomb repulsive force was solely responsible for scattering and positive charge is confined to the nucleus, the actual nuclear size must be <strong class="text-white">&lt; 4.0 &times; 10<sup>&minus;14</sup> m</strong>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Higher Energy & Electron Scattering -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border-t-4 border-t-indigo-400">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="w-10 h-10 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-lg">
+                                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            </span>
+                            <span class="text-xs font-mono uppercase px-2.5 py-1 bg-slate-800 rounded-lg text-slate-300">Beyond Coulomb Force</span>
+                        </div>
+                        <h3 class="font-display text-lg font-bold text-white">2. Probing True Nuclear Size</h3>
+                        <p class="text-sm text-slate-300 leading-relaxed">
+                            What happens if we use &alpha;-particles of <strong class="text-white">higher energies (&gt; 5.5 MeV)</strong>? The distance of closest approach becomes smaller, and at some point the scattering begins to be affected by <strong class="text-indigo-300">short-range attractive nuclear forces</strong>, differing from Rutherford's pure Coulomb calculations!
+                        </p>
+                        <div class="bg-slate-900/90 p-3.5 rounded-xl border border-slate-700/80 text-xs space-y-1.5">
+                            <p class="text-indigo-300 font-semibold"><i class="fa-solid fa-bolt mr-1"></i> Fast Electron Bombardment:</p>
+                            <p class="text-slate-200">
+                                From the distance at which deviations set in, nuclear sizes can be inferred. By performing scattering experiments using <strong class="text-amber-300">fast electrons</strong> instead of &alpha;-particles as projectiles bombarding targets of various elements, the sizes of nuclei have been accurately measured.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Nuclear Volume & Constant Density -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border-t-4 border-t-emerald-400">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-lg">
+                                <i class="fa-solid fa-droplet"></i>
+                            </span>
+                            <span class="text-xs font-mono uppercase px-2.5 py-1 bg-slate-800 rounded-lg text-slate-300">Liquid Drop Analogy</span>
+                        </div>
+                        <h3 class="font-display text-lg font-bold text-white">3. Constant Nuclear Density</h3>
+                        <p class="text-sm text-slate-300 leading-relaxed">
+                            Since radius <span class="font-mono text-sky-300">R = R<sub>0</sub>A<sup>1/3</sup></span>, the volume of a spherical nucleus is proportional to <span class="font-mono text-sky-300">R<sup>3</sup></span>, which is directly proportional to mass number <span class="font-mono text-amber-300">A</span>:
+                        </p>
+                        <div class="bg-slate-900/90 p-3.5 rounded-xl border border-slate-700/80 text-xs space-y-2">
+                            <div class="font-mono text-center text-emerald-300 text-sm py-1 bg-slate-950 rounded-lg">
+                                V = (4/3)&pi;R<sup>3</sup> = (4/3)&pi;R<sub>0</sub><sup>3</sup>A &propto; A
+                            </div>
+                            <p class="text-slate-200">
+                                Because both mass (<span class="font-mono">&approx; A&middot;m<sub>u</sub></span>) and volume (<span class="font-mono">&propto; A</span>) are proportional to <span class="font-mono font-bold">A</span>, the <strong class="text-white">density of the nucleus is constant and independent of A</strong> for all nuclei!
+                            </p>
+                            <p class="text-amber-300 font-mono font-bold text-center text-xs pt-1">
+                                &rho;<sub>nucleus</sub> &approx; 2.3 &times; 10<sup>17</sup> kg m<sup>&minus;3</sup> (Water = 10<sup>3</sup> kg m<sup>&minus;3</sup>)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mathematical Derivation Box: Why Density is Independent of A -->
+            <div class="glass-card rounded-2xl p-6">
+                <h3 class="font-display text-lg sm:text-xl font-bold text-white flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-square-root-variable" style="color: var(--accent-primary);"></i>
+                    Mathematical Proof: Why Nuclear Matter Density (&rho;) is Independent of Mass Number (A)
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center text-sm">
+                    <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800">
+                        <p class="text-xs text-sky-400 uppercase font-bold mb-1">Step 1: Mass &amp; Volume of Nucleus</p>
+                        <p class="text-slate-300">If average mass of one nucleon is <span class="font-mono text-white">m &approx; 1.66 &times; 10<sup>&minus;27</sup> kg</span>, then for a nucleus of mass number <span class="font-mono text-amber-300">A</span>:</p>
+                        <p class="font-mono text-white mt-2">Mass (M) = m &times; A</p>
+                        <p class="font-mono text-white mt-1">Volume (V) = <span class="math-frac"><span>4</span><span>3</span></span>&pi;R<sup>3</sup> = <span class="math-frac"><span>4</span><span>3</span></span>&pi;(R<sub>0</sub>A<sup>1/3</sup>)<sup>3</sup> = <span class="math-frac"><span>4</span><span>3</span></span>&pi;R<sub>0</sub><sup>3</sup>A</p>
+                    </div>
+                    <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800">
+                        <p class="text-xs text-emerald-400 uppercase font-bold mb-1">Step 2: Cancel A in Density Ratio</p>
+                        <div class="font-mono text-white text-center my-2">
+                            &rho; = <span class="math-frac"><span>Mass</span><span>Volume</span></span> = <span class="math-frac"><span>m &middot; <del class="text-rose-400">A</del></span><span>(4/3)&pi;R<sub>0</sub><sup>3</sup> &middot; <del class="text-rose-400">A</del></span></span> = <span class="math-frac"><span>3m</span><span>4&pi;R<sub>0</sub><sup>3</sup></span></span>
+                        </div>
+                        <p class="text-xs text-slate-300 text-center">Notice that <span class="font-mono text-amber-300">A</span> cancels out completely! Different nuclei are like drops of a liquid of constant density.</p>
+                    </div>
+                    <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800">
+                        <p class="text-xs text-amber-400 uppercase font-bold mb-1">Step 3: Substitute Constants</p>
+                        <p class="font-mono text-xs text-slate-300">
+                            &rho; = <span class="math-frac"><span>3 &times; 1.66 &times; 10<sup>&minus;27</sup> kg</span><span>4 &times; 3.1416 &times; (1.2 &times; 10<sup>&minus;15</sup> m)<sup>3</sup></span></span>
+                        </p>
+                        <p class="font-mono text-base font-extrabold text-emerald-400 mt-2">
+                            &rho; &approx; 2.3 &times; 10<sup>17</sup> kg m<sup>&minus;3</sup>
+                        </p>
+                        <p class="text-xs text-slate-400 mt-1">
+                            Why so huge compared to water (<span class="font-mono">10<sup>3</sup> kg m<sup>&minus;3</sup></span>)? Because ordinary matter consisting of atoms has a vast amount of empty space!
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- INTERACTIVE SIMULATION 1: NUCLEAR SIZE, DENSITY & ALPHA SCATTERING LAB -->
+            <div class="glass-panel rounded-3xl p-6 sm:p-8 shadow-2xl">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b" style="border-color: var(--border-color);">
+                    <div>
+                        <span class="px-3 py-1 rounded-full font-bold text-xs uppercase tracking-wider" style="background-color: var(--accent-primary-soft); color: var(--accent-primary);">
+                            <i class="fa-solid fa-flask"></i> Interactive Physics Simulation Lab 1
+                        </span>
+                        <h3 class="font-display text-xl sm:text-2xl font-extrabold text-white mt-1">
+                            Nuclear Radius, Volume &amp; Constant Density Visualizer
+                        </h3>
+                    </div>
+                    <!-- Mode Switcher inside Tab 1 Sim -->
+                    <div class="flex p-1.5 rounded-xl self-start" style="background-color: var(--tab-rail-bg); border: 1px solid var(--border-strong);">
+                        <button onclick="setSizeSimMode('nucleus')" id="sim1-mode-nucleus" class="px-3.5 py-1.5 rounded-lg text-xs font-bold transition" style="background-color: var(--tab-active-bg); color: var(--tab-active-text);">
+                            R = R₀A¹/³ Explorer
+                        </button>
+                        <button onclick="setSizeSimMode('alpha')" id="sim1-mode-alpha" class="px-3.5 py-1.5 rounded-lg text-xs font-bold transition" style="color: var(--tab-inactive-text);">
+                            &alpha;-Scattering Closest Approach
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Mode A: R = R0 A^(1/3) Interactive Visualizer -->
+                <div id="size-sim-nucleus-panel" class="grid grid-cols-1 lg:grid-cols-12 gap-6 pt-6 items-center">
+                    <!-- Controls Column -->
+                    <div class="lg:col-span-5 space-y-5">
+                        <div class="bg-slate-900/90 p-5 rounded-2xl border border-slate-800 space-y-4">
+                            <div class="flex justify-between items-center">
+                                <label for="slider-mass-a" class="text-sm font-bold text-slate-200">
+                                    Select Mass Number (<span class="font-mono text-sky-400">A</span>):
+                                </label>
+                                <span id="label-mass-a" class="font-mono text-2xl font-extrabold text-amber-400 bg-slate-950 px-3 py-1 rounded-xl border border-amber-500/30">
+                                    56
+                                </span>
+                            </div>
+                            <input type="range" id="slider-mass-a" min="1" max="238" value="56" oninput="updateSizeSimulation(this.value)" class="w-full">
+                            
+                            <!-- Preset Element Pills -->
+                            <div>
+                                <p class="text-xs text-slate-400 font-semibold mb-2">Quick Select NCERT Elements:</p>
+                                <div class="flex flex-wrap gap-1.5">
+                                    <button onclick="updateSizeSimulation(1)" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:opacity-80 text-xs font-mono transition">¹H (A=1)</button>
+                                    <button onclick="updateSizeSimulation(4)" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:opacity-80 text-xs font-mono transition">⁴He (A=4)</button>
+                                    <button onclick="updateSizeSimulation(12)" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:opacity-80 text-xs font-mono transition">¹²C (A=12)</button>
+                                    <button onclick="updateSizeSimulation(16)" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:opacity-80 text-xs font-mono transition">¹⁶O (A=16)</button>
+                                    <button onclick="updateSizeSimulation(27)" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:opacity-80 text-xs font-mono transition">²⁷Al (A=27)</button>
+                                    <button onclick="updateSizeSimulation(56)" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:opacity-80 text-xs font-mono transition">⁵⁶Fe (A=56)</button>
+                                    <button onclick="updateSizeSimulation(125)" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:opacity-80 text-xs font-mono transition">¹²⁵Te (A=125)</button>
+                                    <button onclick="updateSizeSimulation(197)" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:opacity-80 text-xs font-mono transition">¹⁹⁷Au (A=197)</button>
+                                    <button onclick="updateSizeSimulation(238)" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:opacity-80 text-xs font-mono transition">²³⁸U (A=238)</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Live Telemetry Readouts -->
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="bg-slate-900/90 p-4 rounded-2xl border border-sky-500/30">
+                                <p class="text-xs text-slate-400">Cube Root (<span class="font-mono">A<sup>1/3</sup></span>)</p>
+                                <p id="readout-a-cuberoot" class="font-mono text-xl font-bold text-white mt-1">3.826</p>
+                            </div>
+                            <div class="bg-slate-900/90 p-4 rounded-2xl border border-sky-500/30">
+                                <p class="text-xs text-slate-400">Nuclear Radius (<span class="font-mono">R</span>)</p>
+                                <p id="readout-radius-fm" class="font-mono text-xl font-bold text-sky-400 mt-1">4.59 fm</p>
+                                <p id="readout-radius-m" class="font-mono text-[11px] text-slate-400">4.59 &times; 10⁻¹⁵ m</p>
+                            </div>
+                            <div class="bg-slate-900/90 p-4 rounded-2xl border border-indigo-500/30">
+                                <p class="text-xs text-slate-400">Nuclear Volume (<span class="font-mono">V &propto; A</span>)</p>
+                                <p id="readout-volume" class="font-mono text-lg font-bold text-indigo-300 mt-1">405.4 fm³</p>
+                            </div>
+                            <div class="bg-slate-900/90 p-4 rounded-2xl border border-emerald-500/40">
+                                <p class="text-xs text-slate-400">Nuclear Density (<span class="font-mono">&rho;</span>)</p>
+                                <p class="font-mono text-lg font-bold text-emerald-400 mt-1">2.3 &times; 10¹⁷ kg/m³</p>
+                                <p class="text-[11px] text-emerald-300 font-semibold">CONSTANT (Independent of A!)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Canvas Visualization Column -->
+                    <div class="lg:col-span-7 canvas-stage rounded-2xl p-4 relative">
+                        <div class="w-full h-[340px] relative">
+                            <canvas id="canvas-nucleus-size" class="w-full h-full block rounded-xl"></canvas>
+                        </div>
+                        <div class="mt-3 flex flex-wrap items-center justify-between text-xs text-slate-300 px-2 gap-2">
+                            <div class="flex items-center gap-4">
+                                <span class="flex items-center gap-1.5 text-slate-200"><span class="w-3 h-3 rounded-full bg-rose-500 inline-block"></span> Proton (p⁺)</span>
+                                <span class="flex items-center gap-1.5 text-slate-200"><span class="w-3 h-3 rounded-full bg-sky-400 inline-block"></span> Neutron (n⁰)</span>
+                            </div>
+                            <span id="nucleus-element-tag" class="font-mono text-amber-400 font-bold">Element: Iron-56 (⁵⁶Fe)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mode B: Alpha-Particle Closest Approach Simulator -->
+                <div id="size-sim-alpha-panel" class="hidden grid-cols-1 lg:grid-cols-12 gap-6 pt-6 items-center">
+                    <div class="lg:col-span-5 space-y-4">
+                        <div class="bg-slate-900/90 p-5 rounded-2xl border border-slate-800 space-y-4">
+                            <div class="flex justify-between items-center">
+                                <label for="slider-alpha-ke" class="text-sm font-bold text-slate-200">
+                                    &alpha;-Particle Kinetic Energy (<span class="font-mono text-amber-400">E<sub>k</sub></span>):
+                                </label>
+                                <span id="label-alpha-ke" class="font-mono text-xl font-extrabold text-amber-300 bg-slate-950 px-3 py-1 rounded-xl border border-amber-500/30">
+                                    5.5 MeV
+                                </span>
+                            </div>
+                            <input type="range" id="slider-alpha-ke" min="2.0" max="28.0" step="0.5" value="5.5" oninput="updateAlphaSim(this.value)" class="w-full">
+                            <div class="flex gap-2">
+                                <button onclick="updateAlphaSim(5.5)" class="px-3 py-1.5 rounded-lg bg-amber-500/20 border border-amber-400/40 text-amber-300 text-xs font-bold">
+                                    NCERT 5.5 MeV Benchmark
+                                </button>
+                                <button onclick="updateAlphaSim(22.0)" class="px-3 py-1.5 rounded-lg bg-rose-500/20 border border-rose-400/40 text-rose-300 text-xs font-bold">
+                                    High Energy (22 MeV)
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-900/90 p-4 rounded-2xl border border-slate-800 space-y-2 text-xs">
+                            <div class="flex justify-between">
+                                <span class="text-slate-400">Distance of Closest Approach (<span class="font-mono">d</span>):</span>
+                                <span id="alpha-closest-d" class="font-mono font-bold text-emerald-400 text-sm">4.0 &times; 10⁻¹⁴ m (40 fm)</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-slate-400">Gold (¹⁹⁷Au) Nuclear Radius (<span class="font-mono">R</span>):</span>
+                                <span class="font-mono font-bold text-sky-400 text-sm">7.0 &times; 10⁻¹⁵ m (7.0 fm)</span>
+                            </div>
+                            <div id="alpha-force-regime" class="mt-2 p-2.5 rounded-xl bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 font-semibold">
+                                <i class="fa-solid fa-shield-halved mr-1"></i> Pure Coulomb Repulsion Regime: Rutherford's formula holds accurately!
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-7 canvas-stage rounded-2xl p-4">
+                        <div class="w-full h-[300px] relative">
+                            <canvas id="canvas-alpha-scattering" class="w-full h-full block rounded-xl"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             TAB 2: 13.4.1 MASS - ENERGY CONNECTION
+             ========================================== -->
+        <section id="tab-mass" class="tab-content space-y-8">
+            <!-- Hero Header -->
+            <div class="glass-card rounded-3xl p-6 sm:p-8 relative overflow-hidden">
+                <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                    <div class="space-y-3 max-w-3xl">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 border border-amber-400/30 text-amber-300 text-xs font-bold uppercase tracking-wider">
+                            <i class="fa-solid fa-bolt"></i> NCERT Section 13.4.1 • Step 02
+                        </div>
+                        <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-white">
+                            13.4.1 Mass – Energy Equivalence
+                        </h2>
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                            Before the advent of Einstein's theory of <strong class="text-white">special relativity</strong>, it was presumed that mass and energy were conserved separately in a reaction. However, Einstein showed that <span class="text-amber-300 font-semibold">mass is another form of energy</span> and one can convert mass-energy into other forms of energy (say kinetic energy) and vice-versa!
+                        </p>
+                    </div>
+                    <div class="formula-box p-5 rounded-2xl shrink-0 text-center min-w-[250px]">
+                        <p class="text-xs uppercase tracking-widest text-amber-300 font-bold mb-1">Einstein's Relation (Eq. 13.6)</p>
+                        <p class="font-mono text-3xl sm:text-4xl font-extrabold text-white">
+                            E = m c<sup>2</sup>
+                        </p>
+                        <p class="text-xs text-slate-300 mt-2 font-mono">
+                            c &approx; 3 &times; 10<sup>8</sup> m s<sup>&minus;1</sup> (in vacuum)
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NCERT Example 13.2 & Atomic Mass Unit Energy Equivalent -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- Left: NCERT Example 13.2 Exact Box -->
+                <div class="ncert-example rounded-2xl p-6 space-y-4 shadow-xl">
+                    <div class="flex items-center justify-between">
+                        <span class="px-3 py-1 rounded-lg font-extrabold text-xs uppercase tracking-wider" style="background-color: var(--accent-secondary); color: #ffffff;">
+                            NCERT Example 13.2
+                        </span>
+                        <span class="text-xs font-mono text-sky-300">Page 310 • Textbook Solved</span>
+                    </div>
+                    <h3 class="font-display text-lg font-bold text-white">
+                        Question: Calculate the energy equivalent of <span class="font-mono text-amber-300">1 g</span> of substance.
+                    </h3>
+                    <div class="bg-slate-950/90 p-4 rounded-xl border border-slate-800 font-mono text-sm space-y-2 text-slate-200">
+                        <p class="text-sky-400 font-bold">Solution:</p>
+                        <p>Given mass, m = 1 g = 10<sup>&minus;3</sup> kg</p>
+                        <p>Speed of light, c = 3 &times; 10<sup>8</sup> m s<sup>&minus;1</sup></p>
+                        <p class="pt-1">Energy, E = m c<sup>2</sup> = 10<sup>&minus;3</sup> &times; (3 &times; 10<sup>8</sup>)<sup>2</sup> J</p>
+                        <p class="text-amber-300 font-bold text-base">
+                            E = 10<sup>&minus;3</sup> &times; 9 &times; 10<sup>16</sup> = 9 &times; 10<sup>13</sup> J
+                        </p>
+                    </div>
+                    <p class="text-sm text-slate-300 italic border-l-2 border-amber-400 pl-3">
+                        "Thus, if one gram of matter is converted to energy, there is a release of an enormous amount of energy."
+                    </p>
+                </div>
+
+                <!-- Right: Experimental Verification & 1 u = 931.5 MeV (From Example 13.3) -->
+                <div class="glass-card rounded-2xl p-6 space-y-4">
+                    <div class="flex items-center justify-between">
+                        <span class="px-3 py-1 rounded-lg bg-purple-500/20 border border-purple-400/30 text-purple-300 font-bold text-xs uppercase tracking-wider">
+                            Nuclear Scale Conversion (Example 13.3)
+                        </span>
+                        <span class="text-xs font-mono text-slate-400">1 u = 931.5 MeV/c²</span>
+                    </div>
+                    <h3 class="font-display text-lg font-bold text-white">
+                        Energy Equivalent of <span class="font-mono text-sky-300">1 Atomic Mass Unit (1 u)</span>
+                    </h3>
+                    <div class="bg-slate-950/90 p-4 rounded-xl border border-slate-800 font-mono text-xs sm:text-sm space-y-1.5 text-slate-200">
+                        <p>1 u = 1.6605 &times; 10<sup>&minus;27</sup> kg</p>
+                        <p>E = 1.6605 &times; 10<sup>&minus;27</sup> &times; (2.9979 &times; 10<sup>8</sup>)<sup>2</sup> kg m<sup>2</sup>/s<sup>2</sup></p>
+                        <p>E = 1.4924 &times; 10<sup>&minus;10</sup> J = <span class="math-frac"><span>1.4924 &times; 10<sup>&minus;10</sup></span><span>1.602 &times; 10<sup>&minus;19</sup></span></span> eV</p>
+                        <p class="text-emerald-400 font-bold text-base pt-1">
+                            E = 0.9315 &times; 10<sup>9</sup> eV = 931.5 MeV &nbsp;&rArr;&nbsp; 1 u = 931.5 MeV/c<sup>2</sup>
+                        </p>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                        <strong class="text-white">Experimental Verification:</strong> Achieved in the study of nuclear reactions amongst nucleons, nuclei, electrons and other particles. In any reaction, the <strong class="text-sky-300">conservation law of energy</strong> states that initial energy equals final energy provided the energy associated with mass is also included!
+                    </p>
+                </div>
+            </div>
+
+            <!-- INTERACTIVE SIMULATION 2: E = mc² REACTOR & CONVERTER -->
+            <div class="glass-panel rounded-3xl p-6 sm:p-8 shadow-2xl">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b" style="border-color: var(--border-color);">
+                    <div>
+                        <span class="px-3 py-1 rounded-full font-bold text-xs uppercase tracking-wider" style="background-color: var(--accent-primary-soft); color: var(--accent-primary);">
+                            <i class="fa-solid fa-fire-flame-curved"></i> Interactive Physics Simulation Lab 2
+                        </span>
+                        <h3 class="font-display text-xl sm:text-2xl font-extrabold text-white mt-1">
+                            Einstein's Mass-to-Energy Conversion Chamber (<span class="font-mono text-amber-400">E = mc²</span>)
+                        </h3>
+                    </div>
+                    <button onclick="triggerAnnihilationPulse()" class="px-4 py-2.5 rounded-xl font-extrabold text-xs sm:text-sm shadow-lg transition flex items-center gap-2 self-start"
+                            style="background-color: var(--accent-primary); color: var(--tab-active-text);">
+                        <i class="fa-solid fa-radiation"></i> Convert Mass to Pure Energy!
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 pt-6 items-center">
+                    <!-- Controls -->
+                    <div class="lg:col-span-5 space-y-4">
+                        <div class="bg-slate-900/90 p-5 rounded-2xl border border-slate-800 space-y-4">
+                            <p class="text-xs font-bold uppercase tracking-wider text-slate-400">Select Preset Sample or Adjust Mass:</p>
+                            <div class="grid grid-cols-2 gap-2">
+                                <button onclick="setMassSimPreset(1, 'u', '1 Atomic Mass Unit (1 u)')" class="p-2.5 rounded-xl bg-slate-800 hover:opacity-85 border border-slate-700 text-left transition">
+                                    <p class="text-xs font-bold text-sky-300">1 u (Nucleon Scale)</p>
+                                    <p class="text-[11px] font-mono text-slate-400">1.6605 &times; 10⁻²⁷ kg</p>
+                                </button>
+                                <button onclick="setMassSimPreset(0.13691, 'u', '¹⁶O Mass Defect (ΔM)')" class="p-2.5 rounded-xl bg-slate-800 hover:opacity-85 border border-slate-700 text-left transition">
+                                    <p class="text-xs font-bold text-emerald-300">¹⁶O Mass Defect</p>
+                                    <p class="text-[11px] font-mono text-slate-400">0.13691 u</p>
+                                </button>
+                                <button onclick="setMassSimPreset(1, 'g', 'NCERT Ex 13.2 (1 gram)')" class="p-2.5 rounded-xl bg-slate-800 hover:opacity-85 border border-amber-500/40 text-left transition">
+                                    <p class="text-xs font-bold text-amber-300">1 gram Substance</p>
+                                    <p class="text-[11px] font-mono text-slate-400">1.0 &times; 10⁻³ kg (Ex 13.2)</p>
+                                </button>
+                                <button onclick="setMassSimPreset(1, 'kg', '1 Kilogram Matter')" class="p-2.5 rounded-xl bg-slate-800 hover:opacity-85 border border-slate-700 text-left transition">
+                                    <p class="text-xs font-bold text-rose-300">1 kg Pure Matter</p>
+                                    <p class="text-[11px] font-mono text-slate-400">1.0 kg</p>
+                                </button>
+                            </div>
+
+                            <div class="pt-2 border-t border-slate-800">
+                                <div class="flex justify-between text-xs font-semibold mb-1.5">
+                                    <span class="text-slate-300">Custom Mass Value:</span>
+                                    <span id="mass-sim-active-label" class="text-amber-300 font-mono">NCERT Ex 13.2 (1 gram)</span>
+                                </div>
+                                <div class="flex gap-2">
+                                    <input type="number" id="input-mass-val" value="1" step="any" min="0.00001" oninput="calculateMassEnergy()" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 font-mono text-white text-sm focus:outline-none">
+                                    <select id="select-mass-unit" onchange="calculateMassEnergy()" class="bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 font-mono text-amber-300 text-sm focus:outline-none">
+                                        <option value="g" selected>grams (g)</option>
+                                        <option value="kg">kilograms (kg)</option>
+                                        <option value="mg">milligrams (mg)</option>
+                                        <option value="u">atomic mass unit (u)</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Output Energy Cards -->
+                        <div class="space-y-2.5">
+                            <div class="bg-slate-900/95 p-4 rounded-2xl border border-amber-500/40 flex justify-between items-center">
+                                <div>
+                                    <p class="text-xs text-slate-400">Energy in Joules (<span class="font-mono">SI Unit</span>)</p>
+                                    <p id="out-energy-joules" class="font-mono text-xl font-extrabold text-amber-400">9.00 &times; 10¹³ J</p>
+                                </div>
+                                <i class="fa-solid fa-bolt text-2xl text-amber-500/40"></i>
+                            </div>
+                            <div class="bg-slate-900/95 p-4 rounded-2xl border border-sky-500/30 flex justify-between items-center">
+                                <div>
+                                    <p class="text-xs text-slate-400">Energy in Mega Electron-Volts (<span class="font-mono">MeV</span>)</p>
+                                    <p id="out-energy-mev" class="font-mono text-lg font-bold text-sky-300">5.62 &times; 10²⁶ MeV</p>
+                                </div>
+                                <i class="fa-solid fa-atom text-2xl text-sky-500/40"></i>
+                            </div>
+                            <div class="bg-slate-900/95 p-4 rounded-2xl border border-emerald-500/30">
+                                <p class="text-xs text-emerald-400 font-bold uppercase tracking-wider">Real-World Equivalence:</p>
+                                <p id="out-energy-analogy" class="text-xs sm:text-sm text-slate-200 mt-1">
+                                    Enough energy to power ~25,000 average households for an entire year or boil 3.45 &times; 10⁷ litres of water!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Canvas Chamber -->
+                    <div class="lg:col-span-7 canvas-stage rounded-2xl p-4">
+                        <div class="w-full h-[320px] relative">
+                            <canvas id="canvas-mass-energy" class="w-full h-full block rounded-xl"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             TAB 3: 13.4.2 NUCLEAR BINDING ENERGY & MASS DEFECT
+             ========================================== -->
+        <section id="tab-binding" class="tab-content space-y-8">
+            <!-- Hero Header -->
+            <div class="glass-card rounded-3xl p-6 sm:p-8">
+                <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                    <div class="space-y-3 max-w-3xl">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 text-xs font-bold uppercase tracking-wider">
+                            <i class="fa-solid fa-link"></i> NCERT Section 13.4.2 • Step 03
+                        </div>
+                        <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-white">
+                            13.4.2 Nuclear Binding Energy &amp; Mass Defect
+                        </h2>
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                            A nucleus is made up of neutrons and protons. One might expect the mass of the nucleus to equal the total mass of its individual protons and neutrons. However, the actual nuclear mass <span class="font-mono text-amber-300 font-bold">M</span> is found to be <strong class="text-rose-400 underline decoration-rose-500">always less</strong> than the sum of its constituents! Where does the missing mass go?
+                        </p>
+                    </div>
+                    <div class="formula-box p-5 rounded-2xl shrink-0 space-y-2">
+                        <div>
+                            <p class="text-[11px] uppercase tracking-wider text-emerald-300 font-bold">Mass Defect (Eq. 13.7)</p>
+                            <p class="font-mono text-base sm:text-lg font-extrabold text-white">
+                                &Delta;M = [Z m<sub>p</sub> + (A &minus; Z)m<sub>n</sub>] &minus; M
+                            </p>
+                        </div>
+                        <div class="pt-2 border-t border-slate-700/80 flex justify-between gap-4">
+                            <div>
+                                <p class="text-[11px] uppercase text-sky-300 font-bold">Binding Energy (13.8)</p>
+                                <p class="font-mono text-base font-bold text-white">E<sub>b</sub> = &Delta;M c<sup>2</sup></p>
+                            </div>
+                            <div>
+                                <p class="text-[11px] uppercase text-amber-300 font-bold">Per Nucleon (13.9)</p>
+                                <p class="font-mono text-base font-bold text-white">E<sub>bn</sub> = E<sub>b</sub> / A</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NCERT Oxygen-16 Complete Breakdown & Example 13.3 -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                <!-- Oxygen-16 Textbook Calculation -->
+                <div class="lg:col-span-7 glass-card rounded-2xl p-6 space-y-4 border-t-4 border-t-sky-400">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-display text-lg sm:text-xl font-bold text-white">
+                            NCERT Case Study: Mass Defect of Oxygen-16 (<span class="font-mono text-sky-300"><sup>16</sup><sub>8</sub>O</span>)
+                        </h3>
+                        <span class="px-2.5 py-1 bg-sky-500/20 text-sky-300 font-mono text-xs rounded-lg">8 p⁺, 8 n⁰, 8 e⁻</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-300">
+                        Let us consider <span class="font-mono text-white"><sup>16</sup><sub>8</sub>O</span>, a nucleus which has <strong class="text-white">8 neutrons and 8 protons</strong>:
+                    </p>
+                    <div class="bg-slate-950/90 p-4 rounded-xl border border-slate-800 font-mono text-xs sm:text-sm space-y-1.5">
+                        <div class="flex justify-between text-slate-300">
+                            <span>Mass of 8 neutrons = 8 &times; 1.00866 u</span>
+                            <span class="text-white font-semibold">= 8.06928 u</span>
+                        </div>
+                        <div class="flex justify-between text-slate-300">
+                            <span>Mass of 8 protons &nbsp;= 8 &times; 1.00727 u</span>
+                            <span class="text-white font-semibold">= 8.05816 u</span>
+                        </div>
+                        <div class="flex justify-between text-slate-400 text-xs">
+                            <span>(Note: Mass of 8 electrons = 8 &times; 0.00055 u = 0.00440 u)</span>
+                        </div>
+                        <div class="border-t border-slate-800 pt-2 flex justify-between text-sky-300 font-bold">
+                            <span>Expected mass of <sup>16</sup><sub>8</sub>O nucleus (8 &times; 2.01593 u):</span>
+                            <span>= 16.12744 u</span>
+                        </div>
+                        <div class="pt-2 text-slate-300 space-y-1 text-xs">
+                            <p>&bull; Atomic mass of <sup>16</sup><sub>8</sub>O from mass spectroscopy = <span class="text-white">15.99493 u</span></p>
+                            <p>&bull; Subtracting mass of 8 electrons (0.00440 u), experimental mass of <sup>16</sup><sub>8</sub>O nucleus:</p>
+                        </div>
+                        <div class="flex justify-between text-emerald-400 font-bold">
+                            <span>Experimental Mass of <sup>16</sup><sub>8</sub>O Nucleus (M):</span>
+                            <span>= 15.99053 u</span>
+                        </div>
+                        <div class="border-t border-slate-700 pt-2 flex justify-between text-amber-300 font-extrabold text-sm sm:text-base">
+                            <span>Mass Defect (&Delta;M = 16.12744 u &minus; 15.99053 u):</span>
+                            <span>= 0.13691 u</span>
+                        </div>
+                    </div>
+                    <div class="bg-indigo-950/60 p-4 rounded-xl border border-indigo-400/30 text-xs sm:text-sm space-y-1">
+                        <p class="font-bold text-indigo-300"><i class="fa-solid fa-lightbulb mr-1"></i> NCERT Example 13.3 Result for <sup>16</sup><sub>8</sub>O:</p>
+                        <p class="text-slate-200">
+                            Since <span class="font-mono">1 u = 931.5 MeV/c<sup>2</sup></span>, for <sup>16</sup><sub>8</sub>O:
+                            <span class="font-mono font-bold text-amber-300">&Delta;M = 0.13691 &times; 931.5 MeV/c<sup>2</sup> = 127.5 MeV/c<sup>2</sup></span>.
+                            Therefore, the energy needed to separate <sup>16</sup><sub>8</sub>O into its constituents is <strong class="text-emerald-300 font-mono">E<sub>b</sub> = 127.5 MeV</strong> (and <span class="font-mono">E<sub>bn</sub> = 127.5 / 16 = 7.97 MeV/nucleon</span>).
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Physical Meaning of Binding Energy & Binding Energy per Nucleon -->
+                <div class="lg:col-span-5 glass-card rounded-2xl p-6 space-y-4 border-t-4 border-t-emerald-400 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <h3 class="font-display text-lg sm:text-xl font-bold text-white">
+                            Physical Meaning of <span class="font-mono text-emerald-400">E<sub>b</sub></span> and <span class="font-mono text-amber-400">E<sub>bn</sub></span>
+                        </h3>
+                        <div class="p-4 rounded-xl bg-slate-900/90 border border-slate-800 space-y-2">
+                            <p class="text-xs font-bold uppercase text-rose-400 tracking-wider">
+                                <i class="fa-solid fa-hammer mr-1"></i> 1. Breaking a Nucleus (Endothermic)
+                            </p>
+                            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                                Since the mass of the bound nucleus is less than the sum of its constituents in the unbound state, its equivalent energy is lower. If one wants to break the nucleus into <span class="font-mono text-white">Z</span> protons and <span class="font-mono text-white">(A&minus;Z)</span> neutrons, this extra energy <span class="font-mono text-amber-300 font-bold">E<sub>b</sub> = &Delta;M c<sup>2</sup></span> has to be <strong>supplied from outside</strong>!
+                            </p>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-slate-900/90 border border-slate-800 space-y-2">
+                            <p class="text-xs font-bold uppercase text-emerald-400 tracking-wider">
+                                <i class="fa-solid fa-compress-arrows-alt mr-1"></i> 2. Forming a Nucleus (Exothermic)
+                            </p>
+                            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                                Conversely, if a certain number of neutrons and protons are brought together to form a nucleus of a certain charge and mass, an energy <span class="font-mono text-emerald-300 font-bold">E<sub>b</sub></span> will be <strong>released in the process</strong>!
+                            </p>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-amber-500/10 border border-amber-400/30 space-y-2">
+                            <p class="text-xs font-bold uppercase text-amber-300 tracking-wider">
+                                <i class="fa-solid fa-star mr-1"></i> 3. Binding Energy per Nucleon (E<sub>bn</sub>)
+                            </p>
+                            <p class="text-xs sm:text-sm text-slate-200 leading-relaxed">
+                                A more useful measure of how well a nucleus is held together is the <strong class="text-white">binding energy per nucleon</strong> (<span class="font-mono text-amber-300">E<sub>bn</sub> = E<sub>b</sub> / A</span>), which is the average energy per nucleon needed to separate a nucleus into its individual nucleons.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- INTERACTIVE SIMULATION 3: NUCLEON ASSEMBLY WORKBENCH & MASS DEFECT SCALE -->
+            <div class="glass-panel rounded-3xl p-6 sm:p-8 shadow-2xl">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b" style="border-color: var(--border-color);">
+                    <div>
+                        <span class="px-3 py-1 rounded-full font-bold text-xs uppercase tracking-wider" style="background-color: var(--accent-secondary-soft); color: var(--accent-secondary);">
+                            <i class="fa-solid fa-scale-unbalanced"></i> Interactive Physics Simulation Lab 3
+                        </span>
+                        <h3 class="font-display text-xl sm:text-2xl font-extrabold text-white mt-1">
+                            Mass Defect Quantum Balance &amp; Nucleon Assembly Workbench
+                        </h3>
+                    </div>
+                    <!-- State Toggle Button -->
+                    <div class="flex items-center gap-2 self-start">
+                        <button onclick="setBindingSimState('unbound')" id="btn-state-unbound" class="px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-slate-800 text-slate-300 hover:opacity-85 transition">
+                            <i class="fa-solid fa-up-right-and-down-left-from-center mr-1"></i> Separate Nucleons (Supply E<sub>b</sub>)
+                        </button>
+                        <button onclick="setBindingSimState('bound')" id="btn-state-bound" class="px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition shadow-md"
+                                style="background-color: var(--accent-primary); color: var(--tab-active-text);">
+                            <i class="fa-solid fa-compress mr-1"></i> Fuse into Nucleus (Release E<sub>b</sub>)
+                        </button>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 pt-6 items-center">
+                    <!-- Left Selector & Calculation Readout -->
+                    <div class="lg:col-span-5 space-y-4">
+                        <div>
+                            <p class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Choose NCERT Isotope to Weigh &amp; Assemble:</p>
+                            <div class="grid grid-cols-3 gap-2" id="isotope-buttons-container">
+                                <button onclick="selectBindingIsotope('H2')" id="iso-btn-H2" class="iso-btn p-2.5 rounded-xl bg-slate-900 border border-slate-700 text-center transition">
+                                    <p class="font-mono font-bold text-white text-sm">²₁H</p>
+                                    <p class="text-[11px] text-slate-400">Deuteron</p>
+                                </button>
+                                <button onclick="selectBindingIsotope('He4')" id="iso-btn-He4" class="iso-btn p-2.5 rounded-xl bg-slate-900 border border-slate-700 text-center transition">
+                                    <p class="font-mono font-bold text-white text-sm">⁴₂He</p>
+                                    <p class="text-[11px] text-slate-400">Helium-4</p>
+                                </button>
+                                <button onclick="selectBindingIsotope('O16')" id="iso-btn-O16" class="iso-btn p-2.5 rounded-xl bg-emerald-500/20 border-2 border-emerald-400 text-center transition">
+                                    <p class="font-mono font-bold text-emerald-300 text-sm">¹⁶₈O</p>
+                                    <p class="text-[11px] text-emerald-200">Oxygen-16</p>
+                                </button>
+                                <button onclick="selectBindingIsotope('Fe56')" id="iso-btn-Fe56" class="iso-btn p-2.5 rounded-xl bg-slate-900 border border-slate-700 text-center transition">
+                                    <p class="font-mono font-bold text-white text-sm">⁵⁶₂₆Fe</p>
+                                    <p class="text-[11px] text-slate-400">Iron-56</p>
+                                </button>
+                                <button onclick="selectBindingIsotope('Au197')" id="iso-btn-Au197" class="iso-btn p-2.5 rounded-xl bg-slate-900 border border-slate-700 text-center transition">
+                                    <p class="font-mono font-bold text-white text-sm">¹⁹⁷₇₉Au</p>
+                                    <p class="text-[11px] text-slate-400">Gold-197</p>
+                                </button>
+                                <button onclick="selectBindingIsotope('U238')" id="iso-btn-U238" class="iso-btn p-2.5 rounded-xl bg-slate-900 border border-slate-700 text-center transition">
+                                    <p class="font-mono font-bold text-white text-sm">²³⁸₉₂U</p>
+                                    <p class="text-[11px] text-slate-400">Uranium-238</p>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Live Telemetry Table -->
+                        <div class="bg-slate-900/95 p-4 rounded-2xl border border-slate-800 space-y-2.5 text-xs sm:text-sm font-mono">
+                            <div class="flex justify-between items-center pb-2 border-b border-slate-800">
+                                <span class="text-slate-400 font-sans">Constituents (<span id="bind-zn-text" class="text-white font-bold">8p + 8n</span>):</span>
+                                <span id="bind-sum-mass" class="text-sky-300 font-bold">16.12744 u</span>
+                            </div>
+                            <div class="flex justify-between items-center pb-2 border-b border-slate-800">
+                                <span class="text-slate-400 font-sans">Actual Nuclear Mass (<span class="text-white">M</span>):</span>
+                                <span id="bind-actual-mass" class="text-emerald-400 font-bold">15.99053 u</span>
+                            </div>
+                            <div class="flex justify-between items-center pb-2 border-b border-slate-800">
+                                <span class="text-amber-300 font-sans font-bold">Mass Defect (&Delta;M):</span>
+                                <span id="bind-mass-defect" class="text-amber-300 font-extrabold">0.13691 u</span>
+                            </div>
+                            <div class="flex justify-between items-center pb-2 border-b border-slate-800">
+                                <span class="text-slate-300 font-sans font-semibold">Total Binding Energy (E<sub>b</sub>):</span>
+                                <span id="bind-total-eb" class="text-white font-extrabold">127.53 MeV</span>
+                            </div>
+                            <div class="flex justify-between items-center pt-1">
+                                <span class="text-emerald-300 font-sans font-bold">E<sub>bn</sub> (= E<sub>b</sub> / A):</span>
+                                <span id="bind-ebn" class="px-2.5 py-0.5 rounded-lg bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 font-extrabold text-base">7.97 MeV/nucleon</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Diagrammatic Canvas -->
+                    <div class="lg:col-span-7 canvas-stage rounded-2xl p-4">
+                        <div class="w-full h-[340px] relative">
+                            <canvas id="canvas-binding-scale" class="w-full h-full block rounded-xl"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             TAB 4: THE BINDING ENERGY CURVE & CONCLUSIONS
+             ========================================== -->
+        <section id="tab-curve" class="tab-content space-y-8">
+            <!-- Hero Header -->
+            <div class="glass-card rounded-3xl p-6 sm:p-8">
+                <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                    <div class="space-y-3 max-w-3xl">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/20 border border-purple-400/30 text-purple-300 text-xs font-bold uppercase tracking-wider">
+                            <i class="fa-solid fa-chart-area"></i> NCERT Figure 13.1 &amp; Analysis • Step 04
+                        </div>
+                        <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-white">
+                            The Binding Energy Curve &amp; Its Conclusions
+                        </h2>
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                            Figure 13.1 is a plot of the <strong class="text-white">binding energy per nucleon (<span class="font-mono text-sky-300">E<sub>bn</sub></span>) versus the mass number (<span class="font-mono text-amber-300">A</span>)</strong> for a large number of nuclei. This single graph explains the stability of matter, the saturation of nuclear force, <span class="text-rose-300 font-semibold">nuclear fission</span>, and <span class="text-amber-300 font-semibold">stellar nuclear fusion</span>!
+                        </p>
+                    </div>
+                    <div class="bg-slate-900/90 p-4 rounded-2xl border border-purple-500/30 text-xs space-y-2 shrink-0">
+                        <div class="flex items-center justify-between gap-4">
+                            <span class="text-slate-400">Curve Peak (Most Stable):</span>
+                            <span class="font-mono font-bold text-emerald-400">⁵⁶Fe (A=56, E<sub>bn</sub> &approx; 8.75 MeV)</span>
+                        </div>
+                        <div class="flex items-center justify-between gap-4">
+                            <span class="text-slate-400">Plateau Range:</span>
+                            <span class="font-mono font-bold text-sky-300">30 &lt; A &lt; 170 (E<sub>bn</sub> &approx; const)</span>
+                        </div>
+                        <div class="flex items-center justify-between gap-4">
+                            <span class="text-slate-400">Heavy Nuclei Value:</span>
+                            <span class="font-mono font-bold text-amber-300">²³⁸U (A=238, E<sub>bn</sub> &approx; 7.6 MeV)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- INTERACTIVE SIMULATION 4: FIGURE 13.1 BINDING ENERGY CURVE + FISSION/FUSION/SATURATION -->
+            <div class="glass-panel rounded-3xl p-6 sm:p-8 shadow-2xl space-y-6">
+                <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-4 border-b" style="border-color: var(--border-color);">
+                    <div>
+                        <span class="px-3 py-1 rounded-full font-bold text-xs uppercase tracking-wider" style="background-color: var(--accent-primary-soft); color: var(--accent-primary);">
+                            <i class="fa-solid fa-compass-drafting"></i> Interactive NCERT Figure 13.1 Explorer
+                        </span>
+                        <h3 class="font-display text-xl sm:text-2xl font-extrabold text-white mt-1">
+                            Binding Energy per Nucleon (<span class="font-mono text-sky-400">E<sub>bn</sub></span>) as a Function of Mass Number (<span class="font-mono text-amber-400">A</span>)
+                        </h3>
+                    </div>
+
+                    <!-- Interactive Curve Mode Buttons -->
+                    <div class="flex flex-wrap gap-2">
+                        <button onclick="setCurveOverlay('explore')" id="curve-btn-explore" class="px-3.5 py-2 rounded-xl text-xs font-bold shadow-md transition" style="background-color: var(--tab-active-bg); color: var(--tab-active-text);">
+                            <i class="fa-solid fa-magnifying-glass-chart mr-1"></i> Explore All Nuclei
+                        </button>
+                        <button onclick="setCurveOverlay('fusion')" id="curve-btn-fusion" class="px-3.5 py-2 rounded-xl text-xs font-bold bg-slate-800 text-amber-300 border border-amber-500/30 transition">
+                            <i class="fa-solid fa-sun mr-1"></i> Simulate Fusion (A &le; 10)
+                        </button>
+                        <button onclick="setCurveOverlay('fission')" id="curve-btn-fission" class="px-3.5 py-2 rounded-xl text-xs font-bold bg-slate-800 text-rose-300 border border-rose-500/30 transition">
+                            <i class="fa-solid fa-burst mr-1"></i> Simulate Fission (A = 240 &rarr; 120)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Interactive Graph & Inspector Grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                    <!-- Main Graph Canvas (Figure 13.1 Replica + Interactive) -->
+                    <div class="lg:col-span-8 canvas-stage rounded-2xl p-4">
+                        <div class="w-full h-[390px] relative">
+                            <canvas id="canvas-be-curve" class="w-full h-full block rounded-xl cursor-crosshair"></canvas>
+                        </div>
+                        <p class="text-xs text-slate-300 text-center mt-2">
+                            <i class="fa-solid fa-hand-pointer text-sky-400 mr-1"></i> Click on any labeled element on the curve (or use the quick buttons on the right) to inspect its nuclear binding parameters!
+                        </p>
+                    </div>
+
+                    <!-- Right Inspector & Process Simulator -->
+                    <div class="lg:col-span-4 space-y-4">
+                        <!-- Selected Element Card -->
+                        <div class="bg-slate-900/95 p-5 rounded-2xl border border-purple-500/40 space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-bold uppercase tracking-wider text-purple-300">Selected Nucleus on Curve</span>
+                                <span id="curve-sel-region" class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/20 text-emerald-300">Maximum Stability</span>
+                            </div>
+                            <div class="flex items-baseline justify-between">
+                                <h4 id="curve-sel-name" class="font-display text-2xl font-extrabold text-white">⁵⁶Fe (Iron-56)</h4>
+                                <span id="curve-sel-a" class="font-mono text-sm text-slate-400">A = 56, Z = 26</span>
+                            </div>
+                            <div class="grid grid-cols-2 gap-2 pt-1">
+                                <div class="bg-slate-950 p-3 rounded-xl border border-slate-800">
+                                    <p class="text-[11px] text-slate-400">E<sub>bn</sub> (Per Nucleon)</p>
+                                    <p id="curve-sel-ebn" class="font-mono text-lg font-extrabold text-amber-400">8.75 MeV</p>
+                                </div>
+                                <div class="bg-slate-950 p-3 rounded-xl border border-slate-800">
+                                    <p class="text-[11px] text-slate-400">Total E<sub>b</sub> (A &times; E<sub>bn</sub>)</p>
+                                    <p id="curve-sel-eb" class="font-mono text-lg font-extrabold text-sky-400">490.0 MeV</p>
+                                </div>
+                            </div>
+                            <p id="curve-sel-desc" class="text-xs text-slate-300 leading-relaxed pt-1">
+                                Iron-56 sits at the highest peak of the NCERT Binding Energy Curve (~8.75 MeV). Its nucleons are the most tightly bound!
+                            </p>
+                        </div>
+
+                        <!-- Quick Element Selector Pills (All 15 NCERT Fig 13.1 Points) -->
+                        <div class="bg-slate-900/90 p-4 rounded-2xl border border-slate-800">
+                            <p class="text-xs font-bold text-slate-400 mb-2">NCERT Fig. 13.1 Labeled Nuclei:</p>
+                            <div class="flex flex-wrap gap-1.5" id="curve-pill-container">
+                                <!-- Populated via JS -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NCERT Main Features & 4 Key Conclusions Section -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                <!-- Left: Two Main Features of the Plot -->
+                <div class="lg:col-span-5 glass-card rounded-2xl p-6 space-y-4 border-t-4 border-t-sky-400">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-sky-500/20 text-sky-300 text-xs font-bold uppercase">
+                        Observations from Figure 13.1
+                    </div>
+                    <h3 class="font-display text-xl font-extrabold text-white">
+                        Two Main Features of the Plot
+                    </h3>
+                    <div class="space-y-4 text-sm">
+                        <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800 space-y-2">
+                            <p class="font-bold text-sky-300 flex items-center gap-2">
+                                <span class="w-6 h-6 rounded-full bg-sky-500/20 text-sky-300 flex items-center justify-center font-mono text-xs">(i)</span>
+                                Constancy in Middle Mass Region (30 &lt; A &lt; 170)
+                            </p>
+                            <p class="text-slate-300 leading-relaxed text-xs sm:text-sm">
+                                The binding energy per nucleon, <span class="font-mono text-white">E<sub>bn</sub></span>, is <strong class="text-white">practically constant</strong>, i.e., practically independent of the atomic mass number for nuclei of middle mass number (<span class="font-mono text-emerald-300">30 &lt; A &lt; 170</span>).
+                            </p>
+                            <ul class="text-xs text-slate-300 space-y-1 pl-4 list-disc">
+                                <li>Maximum of about <strong class="text-emerald-400 font-mono">8.75 MeV</strong> for <strong class="text-white font-mono">A = 56</strong> (<sup>56</sup>Fe).</li>
+                                <li>Drops slowly to <strong class="text-amber-300 font-mono">7.6 MeV</strong> for <strong class="text-white font-mono">A = 238</strong> (<sup>238</sup>U).</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800 space-y-2">
+                            <p class="font-bold text-amber-300 flex items-center gap-2">
+                                <span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-300 flex items-center justify-center font-mono text-xs">(ii)</span>
+                                Lower E<sub>bn</sub> at Both Extremes
+                            </p>
+                            <p class="text-slate-300 leading-relaxed text-xs sm:text-sm">
+                                <span class="font-mono text-white">E<sub>bn</sub></span> is lower for both <strong class="text-amber-300">light nuclei (A &lt; 30)</strong> and <strong class="text-rose-300">heavy nuclei (A &gt; 170)</strong>.
+                            </p>
+                            <p class="text-xs text-slate-400">
+                                Also notice characteristic peaks for <span class="font-mono text-white"><sup>4</sup>He, <sup>12</sup>C, <sup>16</sup>O</span> which are extra stable compared to their immediate neighbours (like <sup>6</sup>Li, <sup>14</sup>N).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Four Fundamental Conclusions Drawn from the Curve -->
+                <div class="lg:col-span-7 glass-card rounded-2xl p-6 space-y-4 border-t-4 border-t-emerald-400">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-emerald-500/20 text-emerald-300 text-xs font-bold uppercase">
+                        Crucial Board Exam Topic
+                    </div>
+                    <h3 class="font-display text-xl font-extrabold text-white">
+                        Four Major Conclusions Drawn from the Curve
+                    </h3>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs sm:text-sm">
+                        <!-- Conclusion (i) -->
+                        <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800 space-y-1.5">
+                            <p class="font-bold text-emerald-400">(i) Strong &amp; Attractive Force</p>
+                            <p class="text-slate-300 leading-relaxed text-xs">
+                                The nuclear force is <strong class="text-white">attractive and sufficiently strong</strong> to produce a binding energy of a <strong class="text-emerald-300">few MeV per nucleon</strong> (millions of times stronger than atomic Coulomb binding of a few eV).
+                            </p>
+                        </div>
+
+                        <!-- Conclusion (ii) -->
+                        <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800 space-y-1.5">
+                            <p class="font-bold text-sky-400">(ii) Saturation Property (30 &lt; A &lt; 170)</p>
+                            <p class="text-slate-300 leading-relaxed text-xs">
+                                Nuclear force is <strong class="text-white">short-ranged</strong>. A nucleon inside a large nucleus interacts only with a maximum of <span class="font-mono text-sky-300">p</span> immediate neighbours within force range, contributing <span class="font-mono text-sky-300">&approx; pk</span> to binding energy. Adding more nucleons doesn't change the binding of interior nucleons, so <span class="font-mono text-white">E<sub>bn</sub> &approx; pk = constant</span>!
+                            </p>
+                        </div>
+
+                        <!-- Conclusion (iii) -->
+                        <div class="bg-slate-900/90 p-4 rounded-xl border border-rose-500/30 space-y-1.5">
+                            <p class="font-bold text-rose-400">(iii) Nuclear Fission (Heavy Nuclei)</p>
+                            <p class="text-slate-300 leading-relaxed text-xs">
+                                A very heavy nucleus (say <span class="font-mono text-white">A = 240</span>) has lower <span class="font-mono">E<sub>bn</sub></span> compared to <span class="font-mono text-white">A = 120</span>. If <span class="font-mono">A = 240</span> breaks into two <span class="font-mono">A = 120</span> nuclei, nucleons get <strong class="text-rose-300">more tightly bound</strong> and energy is released (<strong class="text-white">Fission</strong>).
+                            </p>
+                        </div>
+
+                        <!-- Conclusion (iv) -->
+                        <div class="bg-slate-900/90 p-4 rounded-xl border border-amber-500/30 space-y-1.5">
+                            <p class="font-bold text-amber-400">(iv) Nuclear Fusion (Light Nuclei A &le; 10)</p>
+                            <p class="text-slate-300 leading-relaxed text-xs">
+                                When two very light nuclei (<span class="font-mono text-white">A &le; 10</span>) join to form a heavier nucleus, the <span class="font-mono">E<sub>bn</sub></span> of the fused nucleus is greater than the lighter nuclei. The final system is <strong class="text-amber-300">more tightly bound</strong>, releasing huge energy (<strong class="text-white">Fusion in the Sun</strong>).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Saturation Property Visual Diagram (Conclusion ii Deep Dive) -->
+            <div class="glass-card rounded-2xl p-6">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                    <div class="lg:col-span-6 space-y-3">
+                        <span class="px-2.5 py-1 rounded-md bg-sky-500/20 text-sky-300 text-xs font-bold uppercase">
+                            Deep-Dive: Conclusion (ii)
+                        </span>
+                        <h4 class="font-display text-lg sm:text-xl font-bold text-white">
+                            Why <span class="font-mono text-sky-300">E<sub>bn</sub> &approx; p&middot;k</span> is Constant: Saturation of Nuclear Force
+                        </h4>
+                        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                            Consider a particular nucleon inside a sufficiently large nucleus. Because the nuclear force is <strong class="text-white">short-ranged (~2–3 fm)</strong>, it is under the influence of only its <strong class="text-emerald-300">immediate <span class="font-mono">p</span> neighbours</strong> (shown in green). Any nucleon beyond this range (grey) has <strong>zero influence</strong> on it!
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-1">
+                            <button onclick="setSaturationFocus('interior')" id="sat-btn-interior" class="px-3.5 py-2 rounded-xl text-xs font-bold transition" style="background-color: var(--tab-active-bg); color: var(--tab-active-text);">
+                                Inspect Interior Nucleon (Max p Neighbours &rarr; E<sub>bn</sub> &approx; pk)
+                            </button>
+                            <button onclick="setSaturationFocus('surface')" id="sat-btn-surface" class="px-3.5 py-2 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 transition">
+                                Inspect Surface Nucleon (Fewer Neighbours &rarr; Lower E<sub>bn</sub>)
+                            </button>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-6 canvas-stage rounded-2xl p-3">
+                        <div class="w-full h-[220px] relative">
+                            <canvas id="canvas-saturation" class="w-full h-full block rounded-xl"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             TAB 5: 5 PRACTICE QUESTIONS (NUMERICALS)
+             ========================================== -->
+        <section id="tab-practice" class="tab-content space-y-8">
+            <div class="glass-card rounded-3xl p-6 sm:p-8 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div>
+                    <span class="px-3 py-1 rounded-full bg-sky-500/20 text-sky-300 font-bold text-xs uppercase tracking-wider">
+                        <i class="fa-solid fa-pen-ruler"></i> CBSE &amp; NCERT Board Numericals • Step 05
+                    </span>
+                    <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-white mt-2">
+                        5 Interactive Numerical &amp; Conceptual Practice Problems
+                    </h2>
+                    <p class="text-slate-300 text-sm mt-1">
+                        Solve each problem, enter your numerical answer to verify instantly, or click <strong class="text-sky-300">"Show Step-by-Step Solution"</strong> to study the complete NCERT working.
+                    </p>
+                </div>
+                <div class="bg-slate-900/90 px-5 py-3 rounded-2xl border border-slate-700 text-center shrink-0">
+                    <p class="text-xs text-slate-400 uppercase font-bold">Problems Solved</p>
+                    <p id="practice-progress-text" class="font-mono text-2xl font-extrabold text-emerald-400">0 / 5</p>
+                </div>
+            </div>
+
+            <!-- Practice Questions Container -->
+            <div class="space-y-6" id="practice-questions-list">
+                <!-- Populated dynamically via JS -->
+            </div>
+        </section>
+
+        <!-- ==========================================
+             TAB 6: GAMIFIED 5-MCQ QUIZ SESSION
+             ========================================== -->
+        <section id="tab-quiz" class="tab-content space-y-8">
+            <!-- Gamified Quiz Arena -->
+            <div class="glass-panel rounded-3xl p-6 sm:p-8 shadow-2xl">
+                <!-- Top HUD Bar -->
+                <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b" style="border-color: var(--border-color);">
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 rounded-2xl flex items-center justify-center text-xl font-black shadow-lg"
+                             style="background-color: var(--accent-primary); color: var(--tab-active-text);">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-wider" style="color: var(--accent-primary);">Step 06 • Gamified Mastery Arena</span>
+                            <h2 class="font-display text-xl sm:text-2xl font-extrabold text-white">Nuclear Physics Challenge (5 MCQs)</h2>
+                        </div>
+                    </div>
+
+                    <!-- Score, Streak & Progress HUD -->
+                    <div class="flex items-center gap-3">
+                        <div class="bg-slate-900 px-4 py-2 rounded-xl border border-slate-700 text-center">
+                            <p class="text-[10px] uppercase text-slate-400 font-bold">XP Score</p>
+                            <p id="quiz-hud-score" class="font-mono text-lg font-extrabold text-amber-400">0 XP</p>
+                        </div>
+                        <div class="bg-slate-900 px-4 py-2 rounded-xl border border-slate-700 text-center">
+                            <p class="text-[10px] uppercase text-slate-400 font-bold">Streak</p>
+                            <p id="quiz-hud-streak" class="font-mono text-lg font-extrabold text-orange-400">0 🔥</p>
+                        </div>
+                        <div class="bg-slate-900 px-4 py-2 rounded-xl border border-slate-700 text-center">
+                            <p class="text-[10px] uppercase text-slate-400 font-bold">Question</p>
+                            <p id="quiz-hud-qnum" class="font-mono text-lg font-extrabold text-sky-400">1 / 5</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Progress Bar -->
+                <div class="w-full h-2.5 bg-slate-900 rounded-full overflow-hidden my-5 border border-slate-800">
+                    <div id="quiz-progress-bar" class="h-full transition-all duration-500" style="width: 20%; background-color: var(--accent-primary);"></div>
+                </div>
+
+                <!-- Active Question View -->
+                <div id="quiz-question-container" class="space-y-6 py-2">
+                    <div class="bg-slate-900/90 p-6 rounded-2xl border border-slate-800 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span id="quiz-q-tag" class="px-3 py-1 rounded-full text-xs font-bold" style="background-color: var(--accent-secondary-soft); color: var(--accent-secondary);">Concept Check</span>
+                            <span class="text-xs font-mono text-slate-400">+100 XP (+25 Streak Bonus)</span>
+                        </div>
+                        <h3 id="quiz-q-text" class="font-display text-lg sm:text-xl font-bold text-white leading-relaxed">
+                            Loading question...
+                        </h3>
+                    </div>
+
+                    <!-- Options Grid -->
+                    <div id="quiz-options-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- Populated via JS -->
+                    </div>
+
+                    <!-- Explanation Feedback Box -->
+                    <div id="quiz-feedback-box" class="hidden p-5 rounded-2xl border">
+                        <div class="flex items-start gap-3">
+                            <i id="quiz-feedback-icon" class="text-2xl mt-0.5"></i>
+                            <div class="space-y-1">
+                                <h4 id="quiz-feedback-title" class="font-display font-bold text-base"></h4>
+                                <p id="quiz-feedback-text" class="text-xs sm:text-sm text-slate-200 leading-relaxed"></p>
+                            </div>
+                        </div>
+                        <div class="mt-4 flex justify-end">
+                            <button onclick="nextQuizQuestion()" id="quiz-next-btn" class="px-5 py-2.5 rounded-xl font-extrabold text-sm transition flex items-center gap-2"
+                                    style="background-color: var(--accent-primary); color: var(--tab-active-text);">
+                                <span>Next Question</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quiz Completion Screen -->
+                <div id="quiz-result-screen" class="hidden text-center py-8 space-y-6">
+                    <div class="w-20 h-20 rounded-3xl mx-auto flex items-center justify-center text-4xl shadow-2xl"
+                         style="background-color: var(--accent-primary); color: var(--tab-active-text);">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <div class="space-y-2">
+                        <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold uppercase tracking-widest">
+                            Assessment Complete
+                        </span>
+                        <h3 id="quiz-final-heading" class="font-display text-3xl font-extrabold text-white">
+                            Outstanding Nuclear Physicist!
+                        </h3>
+                        <p class="text-slate-400 text-sm max-w-md mx-auto">
+                            You have completed the Class 12 NCERT Nuclei Interactive Mastery Quiz curated by <strong class="text-amber-300">Hrishikesh M (PGT Physics)</strong>.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-4 max-w-lg mx-auto">
+                        <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800">
+                            <p class="text-xs text-slate-400">Final Score</p>
+                            <p id="quiz-final-score" class="font-mono text-2xl font-extrabold text-amber-400 mt-1">500 XP</p>
+                        </div>
+                        <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800">
+                            <p class="text-xs text-slate-400">Accuracy</p>
+                            <p id="quiz-final-accuracy" class="font-mono text-2xl font-extrabold text-emerald-400 mt-1">100%</p>
+                        </div>
+                        <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800">
+                            <p class="text-xs text-slate-400">Best Streak</p>
+                            <p id="quiz-final-streak" class="font-mono text-2xl font-extrabold text-orange-400 mt-1">5 🔥</p>
+                        </div>
+                    </div>
+
+                    <button onclick="restartQuiz()" class="px-6 py-3 rounded-2xl font-extrabold text-sm shadow-xl transition inline-flex items-center gap-2"
+                            style="background-color: var(--accent-primary); color: var(--tab-active-text);">
+                        <i class="fa-solid fa-rotate-right"></i> Play Quiz Again
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer with Educator Credit -->
+    <footer class="border-t py-6 mt-12 transition-colors" style="background-color: var(--bg-elevated); border-color: var(--border-color);">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs" style="color: var(--text-muted);">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-atom" style="color: var(--accent-primary);"></i>
+                <span class="font-semibold">NCERT Class 12 Physics • Chapter 13: Nuclei (Sections 13.3 &amp; 13.4)</span>
+            </div>
+            <div class="text-center sm:text-right">
+                Interactive e-Book Module Created by <strong class="font-extrabold" style="color: var(--text-main);">Hrishikesh M <span style="color: var(--accent-primary);">(PGT Physics)</span></strong>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================
+         JAVASCRIPT ENGINE FOR PALETTE STUDIO, SIMULATIONS, GRAPHS & QUIZZES
+         ========================================== -->
+    <script>
+        /* ------------------------------------------
+           LIVE COLOR PALETTE STUDIO SWITCHER
+        ------------------------------------------ */
+        let currentTheme = 'terracotta';
+
+        function setThemePalette(themeName) {
+            currentTheme = themeName;
+            document.documentElement.setAttribute('data-theme', themeName);
+
+            document.querySelectorAll('.swatch-btn').forEach(btn => {
+                btn.classList.remove('active-swatch');
+            });
+            const activeSwatch = document.getElementById('swatch-' + themeName);
+            if (activeSwatch) activeSwatch.classList.add('active-swatch');
+
+            // Re-render all active canvases so colors harmonize with selected palette
+            drawNucleusSizeCanvas();
+            drawAlphaCanvas();
+            drawMassEnergyCanvas();
+            drawBindingScaleCanvas();
+            drawBindingEnergyCurve();
+            drawSaturationCanvas();
+        }
+
+        /* ------------------------------------------
+           GLOBAL TAB NAVIGATION
+        ------------------------------------------ */
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active-tab');
+            });
+
+            const activeBtn = document.getElementById('btn-' + tabId);
+            if (activeBtn) {
+                activeBtn.classList.add('active-tab');
+            }
+
+            setTimeout(() => {
+                if (tabId === 'tab-size') {
+                    drawNucleusSizeCanvas();
+                    drawAlphaCanvas();
+                } else if (tabId === 'tab-mass') {
+                    drawMassEnergyCanvas();
+                } else if (tabId === 'tab-binding') {
+                    drawBindingScaleCanvas();
+                } else if (tabId === 'tab-curve') {
+                    drawBindingEnergyCurve();
+                    drawSaturationCanvas();
+                }
+            }, 50);
+        }
+
+        /* ------------------------------------------
+           TAB 1 SIMULATION: NUCLEAR SIZE (R = R0 A^1/3) & ALPHA SCATTERING
+        ------------------------------------------ */
+        let currentMassA = 56;
+        let sizeSimMode = 'nucleus';
+        let alphaEnergyMeV = 5.5;
+
+        const elementNamesByA = {
+            1: "Hydrogen-1 (¹H)",
+            4: "Helium-4 (⁴He)",
+            12: "Carbon-12 (¹²C)",
+            16: "Oxygen-16 (¹⁶O)",
+            27: "Aluminium-27 (²⁷Al)",
+            56: "Iron-56 (⁵⁶Fe)",
+            125: "Tellurium-125 (¹²⁵Te)",
+            197: "Gold-197 (¹⁹⁷Au)",
+            238: "Uranium-238 (²³⁸U)"
+        };
+
+        function setSizeSimMode(mode) {
+            sizeSimMode = mode;
+            const nPanel = document.getElementById('size-sim-nucleus-panel');
+            const aPanel = document.getElementById('size-sim-alpha-panel');
+            const btnN = document.getElementById('sim1-mode-nucleus');
+            const btnA = document.getElementById('sim1-mode-alpha');
+
+            if (mode === 'nucleus') {
+                nPanel.classList.remove('hidden');
+                nPanel.classList.add('grid');
+                aPanel.classList.add('hidden');
+                aPanel.classList.remove('grid');
+                btnN.style.backgroundColor = 'var(--tab-active-bg)';
+                btnN.style.color = 'var(--tab-active-text)';
+                btnA.style.backgroundColor = 'transparent';
+                btnA.style.color = 'var(--tab-inactive-text)';
+                drawNucleusSizeCanvas();
+            } else {
+                aPanel.classList.remove('hidden');
+                aPanel.classList.add('grid');
+                nPanel.classList.add('hidden');
+                nPanel.classList.remove('grid');
+                btnA.style.backgroundColor = 'var(--tab-active-bg)';
+                btnA.style.color = 'var(--tab-active-text)';
+                btnN.style.backgroundColor = 'transparent';
+                btnN.style.color = 'var(--tab-inactive-text)';
+                drawAlphaCanvas();
+            }
+        }
+
+        function updateSizeSimulation(val) {
+            currentMassA = parseInt(val, 10);
+            document.getElementById('slider-mass-a').value = currentMassA;
+            document.getElementById('label-mass-a').textContent = currentMassA;
+
+            const cubeRoot = Math.cbrt(currentMassA);
+            const R0 = 1.2; // fm
+            const R = R0 * cubeRoot;
+            const V = (4 / 3) * Math.PI * Math.pow(R, 3);
+
+            document.getElementById('readout-a-cuberoot').textContent = cubeRoot.toFixed(3);
+            document.getElementById('readout-radius-fm').textContent = R.toFixed(2) + " fm";
+            document.getElementById('readout-radius-m').innerHTML = R.toFixed(2) + " &times; 10⁻¹⁵ m";
+            document.getElementById('readout-volume').textContent = V.toFixed(1) + " fm³";
+
+            const elLabel = elementNamesByA[currentMassA] || `Custom Nucleus (A=${currentMassA})`;
+            document.getElementById('nucleus-element-tag').textContent = `Nucleus: ${elLabel}`;
+
+            drawNucleusSizeCanvas();
+        }
+
+        function drawNucleusSizeCanvas() {
+            const canvas = document.getElementById('canvas-nucleus-size');
+            if (!canvas) return;
+            const rect = canvas.parentElement.getBoundingClientRect();
+            canvas.width = rect.width || 600;
+            canvas.height = rect.height || 340;
+            const ctx = canvas.getContext('2d');
+
+            const w = canvas.width;
+            const h = canvas.height;
+            ctx.clearRect(0, 0, w, h);
+
+            // Subtle Grid
+            ctx.strokeStyle = 'rgba(148, 163, 184, 0.14)';
+            ctx.lineWidth = 1;
+            for (let x = 0; x < w; x += 30) {
+                ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, h); ctx.stroke();
+            }
+            for (let y = 0; y < h; y += 30) {
+                ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(w, y); ctx.stroke();
+            }
+
+            const cx = w * 0.42;
+            const cy = h * 0.5;
+            const R_fm = 1.2 * Math.cbrt(currentMassA);
+            const scalePxPerFm = Math.min(w, h) / 19;
+            const radiusPx = R_fm * scalePxPerFm;
+
+            // Outer Glow
+            const glow = ctx.createRadialGradient(cx, cy, radiusPx * 0.2, cx, cy, radiusPx * 1.35);
+            glow.addColorStop(0, 'rgba(245, 158, 11, 0.25)');
+            glow.addColorStop(1, 'rgba(245, 158, 11, 0)');
+            ctx.fillStyle = glow;
+            ctx.beginPath();
+            ctx.arc(cx, cy, radiusPx * 1.35, 0, Math.PI * 2);
+            ctx.fill();
+
+            // Draw packed nucleons inside sphere using golden-angle spiral
+            const numNucleons = currentMassA;
+            const nucleonRadius = Math.max(4, Math.min(13, scalePxPerFm * 0.85));
+            const goldenAngle = Math.PI * (3 - Math.sqrt(5));
+
+            for (let i = 0; i < numNucleons; i++) {
+                const rRatio = numNucleons === 1 ? 0 : Math.sqrt((i + 0.5) / numNucleons);
+                const maxR = Math.max(0, radiusPx - nucleonRadius * 0.75);
+                const r = rRatio * maxR;
+                const theta = i * goldenAngle;
+
+                const nx = cx + r * Math.cos(theta);
+                const ny = cy + r * Math.sin(theta);
+
+                const isProton = (i % 2 === 0);
+                ctx.beginPath();
+                ctx.arc(nx, ny, nucleonRadius, 0, Math.PI * 2);
+                ctx.fillStyle = isProton ? '#f43f5e' : '#38bdf8';
+                ctx.fill();
+                ctx.strokeStyle = 'rgba(15, 23, 42, 0.75)';
+                ctx.lineWidth = 1;
+                ctx.stroke();
+            }
+
+            // Boundary Circle of R
+            ctx.save();
+            ctx.setLineDash([5, 5]);
+            ctx.strokeStyle = '#fbbf24';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.arc(cx, cy, radiusPx, 0, Math.PI * 2);
+            ctx.stroke();
+            ctx.restore();
+
+            // Dimension Callout Line for R
+            ctx.strokeStyle = '#fbbf24';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(cx, cy);
+            ctx.lineTo(cx + radiusPx, cy);
+            ctx.stroke();
+
+            ctx.fillStyle = '#fbbf24';
+            ctx.font = 'bold 13px "JetBrains Mono", monospace';
+            ctx.fillText(`R = ${R_fm.toFixed(2)} fm`, cx + 8, cy - 8);
+
+            // Right Side Constant Density Gauge Bar
+            const barX = w * 0.82;
+            const barTop = 45;
+            const barHeight = h - 90;
+            ctx.fillStyle = 'rgba(15, 23, 42, 0.9)';
+            ctx.strokeStyle = 'rgba(16, 185, 129, 0.55)';
+            ctx.lineWidth = 1.5;
+            ctx.beginPath();
+            ctx.roundRect(barX - 45, barTop, 95, barHeight, 12);
+            ctx.fill();
+            ctx.stroke();
+
+            ctx.fillStyle = '#10b981';
+            ctx.font = 'bold 11px "Plus Jakarta Sans", sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('NUCLEAR', barX + 2, barTop + 22);
+            ctx.fillText('DENSITY (ρ)', barX + 2, barTop + 36);
+
+            // Constant liquid level
+            const fillH = barHeight * 0.58;
+            const grad = ctx.createLinearGradient(0, barTop + barHeight - fillH, 0, barTop + barHeight - 12);
+            grad.addColorStop(0, '#10b981');
+            grad.addColorStop(1, '#059669');
+            ctx.fillStyle = grad;
+            ctx.beginPath();
+            ctx.roundRect(barX - 30, barTop + barHeight - fillH - 12, 65, fillH, 8);
+            ctx.fill();
+
+            ctx.fillStyle = '#ffffff';
+            ctx.font = 'bold 11px "JetBrains Mono", monospace';
+            ctx.fillText('2.3×10¹⁷', barX + 2, barTop + barHeight - fillH / 2 - 10);
+            ctx.fillText('kg/m³', barX + 2, barTop + barHeight - fillH / 2 + 6);
+            ctx.textAlign = 'left';
+        }
+
+        function updateAlphaSim(keVal) {
+            alphaEnergyMeV = parseFloat(keVal);
+            document.getElementById('slider-alpha-ke').value = alphaEnergyMeV;
+            document.getElementById('label-alpha-ke').textContent = alphaEnergyMeV.toFixed(1) + " MeV";
+
+            const d_fm = (5.5 / alphaEnergyMeV) * 40.0;
+            const d_m_exp = (d_fm / 10).toFixed(2);
+            document.getElementById('alpha-closest-d').innerHTML = `${d_m_exp} &times; 10⁻¹⁴ m (${d_fm.toFixed(1)} fm)`;
+
+            const regimeEl = document.getElementById('alpha-force-regime');
+            if (d_fm > 14.0) {
+                regimeEl.className = "mt-2 p-2.5 rounded-xl bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 font-semibold";
+                regimeEl.innerHTML = `<i class="fa-solid fa-shield-halved mr-1"></i> Pure Coulomb Repulsion Regime (d = ${d_fm.toFixed(1)} fm > R<sub>Au</sub>): Rutherford's formula holds!`;
+            } else {
+                regimeEl.className = "mt-2 p-2.5 rounded-xl bg-rose-500/20 border border-rose-500/40 text-rose-300 font-semibold";
+                regimeEl.innerHTML = `<i class="fa-solid fa-triangle-exclamation mr-1"></i> Short-Range Nuclear Force Regime (d = ${d_fm.toFixed(1)} fm): Scattering deviates from Rutherford's pure Coulomb law!`;
+            }
+
+            drawAlphaCanvas();
+        }
+
+        function drawAlphaCanvas() {
+            const canvas = document.getElementById('canvas-alpha-scattering');
+            if (!canvas) return;
+            const rect = canvas.parentElement.getBoundingClientRect();
+            canvas.width = rect.width || 600;
+            canvas.height = rect.height || 300;
+            const ctx = canvas.getContext('2d');
+
+            const w = canvas.width;
+            const h = canvas.height;
+            ctx.clearRect(0, 0, w, h);
+
+            const goldX = w * 0.78;
+            const goldY = h * 0.5;
+            const d_fm = (5.5 / alphaEnergyMeV) * 40.0;
+            const pxPerFm = (w * 0.55) / 80;
+
+            // Nuclear Force Range Halo (~12 fm)
+            const nucForcePx = 12 * pxPerFm;
+            ctx.fillStyle = 'rgba(244, 63, 94, 0.16)';
+            ctx.strokeStyle = 'rgba(244, 63, 94, 0.6)';
+            ctx.setLineDash([4, 4]);
+            ctx.beginPath();
+            ctx.arc(goldX, goldY, nucForcePx, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.stroke();
+            ctx.setLineDash([]);
+
+            // Gold Nucleus (R = 7 fm)
+            const goldRPx = Math.max(16, 7 * pxPerFm);
+            const grad = ctx.createRadialGradient(goldX - 4, goldY - 4, 2, goldX, goldY, goldRPx);
+            grad.addColorStop(0, '#fde047');
+            grad.addColorStop(1, '#ca8a04');
+            ctx.fillStyle = grad;
+            ctx.beginPath();
+            ctx.arc(goldX, goldY, goldRPx, 0, Math.PI * 2);
+            ctx.fill();
+
+            ctx.fillStyle = '#0f172a';
+            ctx.font = 'bold 11px "JetBrains Mono", monospace';
+            ctx.textAlign = 'center';
+            ctx.fillText('¹⁹⁷Au', goldX, goldY + 4);
+
+            const turnX = goldX - d_fm * pxPerFm;
+
+            // Trajectory
+            ctx.strokeStyle = '#38bdf8';
+            ctx.lineWidth = 2.5;
+            ctx.beginPath();
+            ctx.moveTo(30, goldY - 6);
+            ctx.lineTo(turnX, goldY - 6);
+            ctx.arc(turnX, goldY, 6, -Math.PI / 2, Math.PI / 2, false);
+            ctx.lineTo(30, goldY + 6);
+            ctx.stroke();
+
+            ctx.fillStyle = '#38bdf8';
+            ctx.beginPath();
+            ctx.arc(turnX, goldY, 9, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.fillStyle = '#ffffff';
+            ctx.font = 'bold 11px "Plus Jakarta Sans", sans-serif';
+            ctx.fillText('α (He²⁺)', turnX, goldY - 16);
+
+            // Distance of closest approach bracket
+            ctx.strokeStyle = '#10b981';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(turnX, goldY + 38);
+            ctx.lineTo(goldX, goldY + 38);
+            ctx.stroke();
+
+            ctx.fillStyle = '#10b981';
+            ctx.font = 'bold 12px "JetBrains Mono", monospace';
+            ctx.fillText(`d = ${d_fm.toFixed(1)} fm`, (turnX + goldX) / 2, goldY + 56);
+            ctx.textAlign = 'left';
+        }
+
+        /* ------------------------------------------
+           TAB 2 SIMULATION: MASS-ENERGY EQUIVALENCE (E = mc^2)
+        ------------------------------------------ */
+        let massPulseRadius = 0;
+        let massPulseActive = false;
+
+        function setMassSimPreset(val, unit, label) {
+            document.getElementById('input-mass-val').value = val;
+            document.getElementById('select-mass-unit').value = unit;
+            document.getElementById('mass-sim-active-label').textContent = label;
+            calculateMassEnergy();
+            triggerAnnihilationPulse();
+        }
+
+        function calculateMassEnergy() {
+            const val = parseFloat(document.getElementById('input-mass-val').value) || 0;
+            const unit = document.getElementById('select-mass-unit').value;
+
+            let massKg = 0;
+            if (unit === 'kg') massKg = val;
+            else if (unit === 'g') massKg = val * 1e-3;
+            else if (unit === 'mg') massKg = val * 1e-6;
+            else if (unit === 'u') massKg = val * 1.6605e-27;
+
+            const energyJ = (unit === 'g' && val === 1) ? 9.0e13 : massKg * (unit === 'u' ? Math.pow(2.9979e8, 2) : 9.0e16);
+            const energyMeV = (unit === 'u') ? (val * 931.5) : (energyJ / 1.60218e-13);
+
+            document.getElementById('out-energy-joules').innerHTML = formatSci(energyJ) + " J";
+            document.getElementById('out-energy-mev').innerHTML = formatSci(energyMeV) + " MeV";
+
+            const analogyEl = document.getElementById('out-energy-analogy');
+            if (unit === 'u') {
+                analogyEl.textContent = `At the nuclear scale, ${val} u converts directly into ${energyMeV.toFixed(2)} MeV of nuclear binding or kinetic energy (since 1 u = 931.5 MeV/c²)!`;
+            } else {
+                const homesYears = (energyJ / 3.6e10).toFixed(0);
+                analogyEl.textContent = `Enough energy to supply ~${Number(homesYears).toLocaleString()} average households for a full year!`;
+            }
+
+            drawMassEnergyCanvas();
+        }
+
+        function formatSci(num) {
+            if (num === 0) return "0";
+            if (num >= 1 && num < 10000) return num.toFixed(2);
+            const exp = Math.floor(Math.log10(Math.abs(num)));
+            const mantissa = (num / Math.pow(10, exp)).toFixed(2);
+            return `${mantissa} &times; 10<sup>${exp}</sup>`;
+        }
+
+        function triggerAnnihilationPulse() {
+            massPulseRadius = 5;
+            massPulseActive = true;
+            animateMassEnergyPulse();
+        }
+
+        function animateMassEnergyPulse() {
+            if (!massPulseActive) return;
+            massPulseRadius += 10;
+            drawMassEnergyCanvas();
+            if (massPulseRadius < 260) {
+                requestAnimationFrame(animateMassEnergyPulse);
+            } else {
+                massPulseActive = false;
+                drawMassEnergyCanvas();
+            }
+        }
+
+        function drawMassEnergyCanvas() {
+            const canvas = document.getElementById('canvas-mass-energy');
+            if (!canvas) return;
+            const rect = canvas.parentElement.getBoundingClientRect();
+            canvas.width = rect.width || 600;
+            canvas.height = rect.height || 320;
+            const ctx = canvas.getContext('2d');
+
+            const w = canvas.width;
+            const h = canvas.height;
+            ctx.clearRect(0, 0, w, h);
+
+            const cx = w / 2;
+            const cy = h / 2;
+
+            for (let r = 40; r <= 140; r += 35) {
+                ctx.strokeStyle = 'rgba(245, 158, 11, 0.22)';
+                ctx.lineWidth = 1.5;
+                ctx.beginPath();
+                ctx.arc(cx, cy, r, 0, Math.PI * 2);
+                ctx.stroke();
+            }
+
+            const rays = 16;
+            ctx.strokeStyle = 'rgba(251, 191, 36, 0.35)';
+            ctx.lineWidth = 2;
+            for (let i = 0; i < rays; i++) {
+                const angle = (i / rays) * Math.PI * 2;
+                ctx.beginPath();
+                ctx.moveTo(cx + Math.cos(angle) * 28, cy + Math.sin(angle) * 28);
+                ctx.lineTo(cx + Math.cos(angle) * 115, cy + Math.sin(angle) * 115);
+                ctx.stroke();
+            }
+
+            if (massPulseActive) {
+                ctx.strokeStyle = `rgba(251, 191, 36, ${1 - massPulseRadius / 260})`;
+                ctx.lineWidth = 6;
+                ctx.beginPath();
+                ctx.arc(cx, cy, massPulseRadius, 0, Math.PI * 2);
+                ctx.stroke();
+            }
+
+            const coreGrad = ctx.createRadialGradient(cx, cy, 4, cx, cy, 42);
+            coreGrad.addColorStop(0, '#ffffff');
+            coreGrad.addColorStop(0.4, '#fbbf24');
+            coreGrad.addColorStop(1, 'rgba(217, 119, 6, 0)');
+            ctx.fillStyle = coreGrad;
+            ctx.beginPath();
+            ctx.arc(cx, cy, 42, 0, Math.PI * 2);
+            ctx.fill();
+
+            ctx.fillStyle = '#0f172a';
+            ctx.font = 'bold 14px "JetBrains Mono", monospace';
+            ctx.textAlign = 'center';
+            ctx.fillText('E = mc²', cx, cy + 5);
+            ctx.textAlign = 'left';
+        }
+
+        /* ------------------------------------------
+           TAB 3 SIMULATION: MASS DEFECT & BINDING ENERGY WORKBENCH
+        ------------------------------------------ */
+        const bindingIsotopes = {
+            H2:    { symbol: "²₁H",    name: "Deuteron",    Z: 1,  N: 1,   A: 2,   M: 2.01355 },
+            He4:   { symbol: "⁴₂He",   name: "Helium-4",    Z: 2,  N: 2,   A: 4,   M: 4.00151 },
+            O16:   { symbol: "¹⁶₈O",   name: "Oxygen-16",   Z: 8,  N: 8,   A: 16,  M: 15.99053 },
+            Fe56:  { symbol: "⁵⁶₂₆Fe", name: "Iron-56",     Z: 26, N: 30,  A: 56,  M: 55.92067 },
+            Au197: { symbol: "¹⁹⁷₇₉Au",name: "Gold-197",    Z: 79, N: 118, A: 197, M: 196.92323 },
+            U238:  { symbol: "²³⁸₉₂U", name: "Uranium-238", Z: 92, N: 146, A: 238, M: 238.00031 }
+        };
+
+        let activeIsoKey = 'O16';
+        let bindingSimState = 'bound';
+
+        function selectBindingIsotope(key) {
+            activeIsoKey = key;
+            document.querySelectorAll('.iso-btn').forEach(btn => {
+                btn.className = "iso-btn p-2.5 rounded-xl bg-slate-900 border border-slate-700 text-center transition";
+            });
+            const selBtn = document.getElementById('iso-btn-' + key);
+            if (selBtn) {
+                selBtn.className = "iso-btn p-2.5 rounded-xl bg-emerald-500/20 border-2 border-emerald-400 text-center transition";
+            }
+            updateBindingReadouts();
+        }
+
+        function setBindingSimState(state) {
+            bindingSimState = state;
+            const btnU = document.getElementById('btn-state-unbound');
+            const btnB = document.getElementById('btn-state-bound');
+            if (state === 'unbound') {
+                btnU.style.backgroundColor = 'var(--accent-primary)';
+                btnU.style.color = 'var(--tab-active-text)';
+                btnB.style.backgroundColor = 'var(--bg-inset)';
+                btnB.style.color = 'var(--text-secondary)';
+            } else {
+                btnB.style.backgroundColor = 'var(--accent-primary)';
+                btnB.style.color = 'var(--tab-active-text)';
+                btnU.style.backgroundColor = 'var(--bg-inset)';
+                btnU.style.color = 'var(--text-secondary)';
+            }
+            drawBindingScaleCanvas();
+        }
+
+        function updateBindingReadouts() {
+            const iso = bindingIsotopes[activeIsoKey];
+            const mp = 1.00727;
+            const mn = 1.00866;
+
+            const sumMass = iso.Z * mp + iso.N * mn;
+            const deltaM = sumMass - iso.M;
+            const Eb = deltaM * 931.5;
+            const Ebn = Eb / iso.A;
+
+            document.getElementById('bind-zn-text').textContent = `${iso.Z}p + ${iso.N}n`;
+            document.getElementById('bind-sum-mass').textContent = sumMass.toFixed(5) + " u";
+            document.getElementById('bind-actual-mass').textContent = iso.M.toFixed(5) + " u";
+            document.getElementById('bind-mass-defect').textContent = deltaM.toFixed(5) + " u";
+            document.getElementById('bind-total-eb').textContent = Eb.toFixed(2) + " MeV";
+            document.getElementById('bind-ebn').textContent = Ebn.toFixed(2) + " MeV/nucleon";
+
+            drawBindingScaleCanvas();
+        }
+
+        function drawBindingScaleCanvas() {
+            const canvas = document.getElementById('canvas-binding-scale');
+            if (!canvas) return;
+            const rect = canvas.parentElement.getBoundingClientRect();
+            canvas.width = rect.width || 600;
+            canvas.height = rect.height || 340;
+            const ctx = canvas.getContext('2d');
+
+            const w = canvas.width;
+            const h = canvas.height;
+            ctx.clearRect(0, 0, w, h);
+
+            const iso = bindingIsotopes[activeIsoKey];
+            const mp = 1.00727;
+            const mn = 1.00866;
+            const sumMass = iso.Z * mp + iso.N * mn;
+            const deltaM = sumMass - iso.M;
+            const Eb = deltaM * 931.5;
+
+            const cx = w / 2;
+            const baseY = h - 35;
+            const pivotY = h * 0.56;
+
+            // Balance Pillar
+            ctx.fillStyle = '#475569';
+            ctx.fillRect(cx - 8, pivotY, 16, baseY - pivotY);
+            ctx.fillStyle = '#334155';
+            ctx.beginPath();
+            ctx.roundRect(cx - 55, baseY - 12, 110, 14, 6);
+            ctx.fill();
+
+            // Beam tilts toward Left (Unbound Nucleons are ALWAYS heavier than Bound Nucleus!)
+            const tiltAngle = -0.14;
+            const beamHalfLen = w * 0.32;
+
+            const leftX = cx - Math.cos(tiltAngle) * beamHalfLen;
+            const leftY = pivotY - Math.sin(tiltAngle) * beamHalfLen;
+            const rightX = cx + Math.cos(tiltAngle) * beamHalfLen;
+            const rightY = pivotY + Math.sin(tiltAngle) * beamHalfLen;
+
+            ctx.strokeStyle = '#94a3b8';
+            ctx.lineWidth = 5;
+            ctx.beginPath();
+            ctx.moveTo(leftX, leftY);
+            ctx.lineTo(rightX, rightY);
+            ctx.stroke();
+
+            // Left Pan: Unbound Nucleons (Heavier)
+            ctx.fillStyle = 'rgba(56, 189, 248, 0.18)';
+            ctx.strokeStyle = '#38bdf8';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.roundRect(leftX - 75, leftY - 85, 150, 82, 12);
+            ctx.fill();
+            ctx.stroke();
+
+            for (let i = 0; i < Math.min(16, iso.A); i++) {
+                const px = leftX - 48 + (i % 4) * 30;
+                const py = leftY - 62 + Math.floor(i / 4) * 16;
+                ctx.beginPath();
+                ctx.arc(px, py, 5.5, 0, Math.PI * 2);
+                ctx.fillStyle = i % 2 === 0 ? '#f43f5e' : '#38bdf8';
+                ctx.fill();
+            }
+
+            ctx.fillStyle = '#38bdf8';
+            ctx.font = 'bold 12px "JetBrains Mono", monospace';
+            ctx.textAlign = 'center';
+            ctx.fillText(`Unbound (${iso.Z}p + ${iso.N}n)`, leftX, leftY + 22);
+            ctx.fillStyle = '#ffffff';
+            ctx.fillText(`${sumMass.toFixed(5)} u (HEAVIER)`, leftX, leftY + 38);
+
+            // Right Pan: Bound Nucleus (Lighter by ΔM)
+            ctx.fillStyle = 'rgba(16, 185, 129, 0.18)';
+            ctx.strokeStyle = '#10b981';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.roundRect(rightX - 75, rightY - 85, 150, 82, 12);
+            ctx.fill();
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.arc(rightX, rightY - 44, 22, 0, Math.PI * 2);
+            ctx.fillStyle = '#10b981';
+            ctx.fill();
+            ctx.fillStyle = '#0f172a';
+            ctx.font = 'bold 12px "JetBrains Mono", monospace';
+            ctx.fillText(iso.symbol, rightX, rightY - 40);
+
+            ctx.fillStyle = '#10b981';
+            ctx.fillText(`Bound ${iso.name}`, rightX, rightY + 22);
+            ctx.fillStyle = '#ffffff';
+            ctx.fillText(`M = ${iso.M.toFixed(5)} u (LIGHTER)`, rightX, rightY + 38);
+
+            // Top Banner indicating ΔM & Eb
+            ctx.fillStyle = bindingSimState === 'bound' ? 'rgba(16, 185, 129, 0.2)' : 'rgba(244, 63, 94, 0.2)';
+            ctx.strokeStyle = bindingSimState === 'bound' ? '#10b981' : '#f43f5e';
+            ctx.beginPath();
+            ctx.roundRect(w * 0.08, 14, w * 0.84, 48, 12);
+            ctx.fill();
+            ctx.stroke();
+
+            ctx.fillStyle = '#fbbf24';
+            ctx.font = 'bold 12px "JetBrains Mono", monospace';
+            const stateMsg = bindingSimState === 'bound'
+                ? `FUSION TO BOUND NUCLEUS: ΔM = ${deltaM.toFixed(5)} u Released as E_b = ${Eb.toFixed(1)} MeV!`
+                : `BREAKING NUCLEUS APART: Must Supply E_b = ${Eb.toFixed(1)} MeV to restore ΔM = ${deltaM.toFixed(5)} u!`;
+            ctx.fillText(stateMsg, cx, 43);
+            ctx.textAlign = 'left';
+        }
+
+        /* ------------------------------------------
+           TAB 4 SIMULATION: NCERT FIGURE 13.1 BINDING ENERGY CURVE & SATURATION
+        ------------------------------------------ */
+        const ncertCurvePoints = [
+            { id: '2H',   label: '²H',    name: 'Deuterium (²H)',     A: 2,   Z: 1,  Ebn: 1.11, desc: 'Very light nucleus. High surface-to-volume ratio; can fuse to release massive energy.' },
+            { id: '3H',   label: '³H',    name: 'Tritium (³H)',       A: 3,   Z: 1,  Ebn: 2.83, desc: 'Light hydrogen isotope with 1 proton and 2 neutrons.' },
+            { id: '4He',  label: '⁴He',   name: 'Helium-4 (⁴He)',     A: 4,   Z: 2,  Ebn: 7.07, desc: 'Remarkable local stability peak (doubly magic 2p, 2n) much higher than neighbours ³H and ⁶Li!' },
+            { id: '6Li',  label: '⁶Li',   name: 'Lithium-6 (⁶Li)',    A: 6,   Z: 3,  Ebn: 5.33, desc: 'Local dip after ⁴He before rising again toward Carbon-12.' },
+            { id: '12C',  label: '¹²C',   name: 'Carbon-12 (¹²C)',    A: 12,  Z: 6,  Ebn: 7.68, desc: 'Even-even light nucleus with a local stability peak.' },
+            { id: '14N',  label: '¹⁴N',   name: 'Nitrogen-14 (¹⁴N)',  A: 14,  Z: 7,  Ebn: 7.48, desc: 'Slightly lower E_bn than adjacent even-even nuclei ¹²C and ¹⁶O.' },
+            { id: '16O',  label: '¹⁶O',   name: 'Oxygen-16 (¹⁶O)',    A: 16,  Z: 8,  Ebn: 7.97, desc: 'NCERT textbook example (ΔM = 0.13691 u, E_b = 127.5 MeV, E_bn = 7.97 MeV).' },
+            { id: '18O',  label: '¹⁸O',   name: 'Oxygen-18 (¹⁸O)',    A: 18,  Z: 8,  Ebn: 7.76, desc: 'Isotope of oxygen shown on the NCERT Figure 13.1 curve.' },
+            { id: '32S',  label: '³²S',   name: 'Sulphur-32 (³²S)',   A: 32,  Z: 16, Ebn: 8.49, desc: 'Enters the flat stability plateau (30 < A < 170) where nuclear force saturates.' },
+            { id: '56Fe', label: '⁵⁶Fe',  name: 'Iron-56 (⁵⁶Fe)',     A: 56,  Z: 26, Ebn: 8.75, desc: 'MAXIMUM OF THE CURVE (~8.75 MeV)! Most tightly bound nucleus in nature.' },
+            { id: '100Mo',label: '¹⁰⁰Mo', name: 'Molybdenum-100',     A: 100, Z: 42, Ebn: 8.60, desc: 'Middle-mass nucleus on the flat plateau where E_bn is nearly independent of A.' },
+            { id: '127I', label: '¹²⁷I',  name: 'Iodine-127 (¹²⁷I)',  A: 127, Z: 53, Ebn: 8.45, desc: 'Typical intermediate-mass product formed during heavy nuclear fission.' },
+            { id: '184W', label: '¹⁸⁴W',  name: 'Tungsten-184',       A: 184, Z: 74, Ebn: 8.01, desc: 'Above A=170, long-range Coulomb repulsion between protons slowly reduces E_bn.' },
+            { id: '197Au',label: '¹⁹⁷Au', name: 'Gold-197 (¹⁹⁷Au)',   A: 197, Z: 79, Ebn: 7.91, desc: 'Heavy nucleus used in Geiger-Marsden alpha-scattering experiment.' },
+            { id: '238U', label: '²³⁸U',  name: 'Uranium-238 (²³⁸U)', A: 238, Z: 92, Ebn: 7.60, desc: 'Heavy nucleus with E_bn ≈ 7.6 MeV. Splitting into two A≈120 nuclei releases fission energy!' }
+        ];
+
+        let selectedCurvePt = ncertCurvePoints[9]; // 56Fe default
+        let curveOverlayMode = 'explore';
+        let saturationFocusMode = 'interior';
+
+        function initCurvePills() {
+            const container = document.getElementById('curve-pill-container');
+            if (!container) return;
+            container.innerHTML = '';
+            ncertCurvePoints.forEach(pt => {
+                const btn = document.createElement('button');
+                const isSel = (pt.id === selectedCurvePt.id);
+                btn.className = "px-2.5 py-1 rounded-lg font-mono text-xs transition";
+                if (isSel) {
+                    btn.style.backgroundColor = 'var(--tab-active-bg)';
+                    btn.style.color = 'var(--tab-active-text)';
+                    btn.style.fontWeight = '700';
+                } else {
+                    btn.className += " bg-slate-800 text-slate-300 hover:opacity-80";
+                }
+                btn.textContent = pt.label;
+                btn.onclick = () => selectCurvePoint(pt);
+                container.appendChild(btn);
+            });
+        }
+
+        function selectCurvePoint(pt) {
+            selectedCurvePt = pt;
+            document.getElementById('curve-sel-name').textContent = pt.name;
+            document.getElementById('curve-sel-a').textContent = `A = ${pt.A}, Z = ${pt.Z}`;
+            document.getElementById('curve-sel-ebn').textContent = `${pt.Ebn.toFixed(2)} MeV`;
+            document.getElementById('curve-sel-eb').textContent = `${(pt.A * pt.Ebn).toFixed(1)} MeV`;
+            document.getElementById('curve-sel-desc').textContent = pt.desc;
+
+            const regBadge = document.getElementById('curve-sel-region');
+            if (pt.A < 30) {
+                regBadge.className = "px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-amber-500/20 text-amber-300";
+                regBadge.textContent = "Light Nucleus (A < 30)";
+            } else if (pt.A <= 170) {
+                regBadge.className = "px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/20 text-emerald-300";
+                regBadge.textContent = pt.A === 56 ? "Peak Stability (Max E_bn)" : "Plateau Region (30 < A < 170)";
+            } else {
+                regBadge.className = "px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-rose-500/20 text-rose-300";
+                regBadge.textContent = "Heavy Nucleus (A > 170)";
+            }
+
+            initCurvePills();
+            drawBindingEnergyCurve();
+        }
+
+        function setCurveOverlay(mode) {
+            curveOverlayMode = mode;
+            if (mode === 'fusion') selectCurvePoint(ncertCurvePoints[2]);
+            else if (mode === 'fission') selectCurvePoint(ncertCurvePoints[14]);
+            else drawBindingEnergyCurve();
+        }
+
+        function drawBindingEnergyCurve() {
+            const canvas = document.getElementById('canvas-be-curve');
+            if (!canvas) return;
+            const rect = canvas.parentElement.getBoundingClientRect();
+            canvas.width = rect.width || 720;
+            canvas.height = rect.height || 390;
+            const ctx = canvas.getContext('2d');
+
+            const w = canvas.width;
+            const h = canvas.height;
+            ctx.clearRect(0, 0, w, h);
+
+            const padL = 58, padR = 28, padT = 28, padB = 48;
+            const plotW = w - padL - padR;
+            const plotH = h - padT - padB;
+
+            const toX = (A) => padL + (A / 250) * plotW;
+            const toY = (Ebn) => padT + plotH - (Ebn / 10) * plotH;
+
+            // Highlight Plateau Region (30 < A < 170)
+            ctx.fillStyle = 'rgba(16, 185, 129, 0.08)';
+            ctx.fillRect(toX(30), padT, toX(170) - toX(30), plotH);
+
+            // Grid Lines
+            ctx.strokeStyle = 'rgba(148, 163, 184, 0.22)';
+            ctx.lineWidth = 1;
+            ctx.font = '11px "JetBrains Mono", monospace';
+            ctx.fillStyle = '#94a3b8';
+
+            for (let a = 0; a <= 250; a += 50) {
+                const x = toX(a);
+                ctx.beginPath(); ctx.moveTo(x, padT); ctx.lineTo(x, padT + plotH); ctx.stroke();
+                ctx.textAlign = 'center';
+                ctx.fillText(a, x, padT + plotH + 18);
+            }
+
+            for (let e = 0; e <= 10; e += 2) {
+                const y = toY(e);
+                ctx.beginPath(); ctx.moveTo(padL, y); ctx.lineTo(padL + plotW, y); ctx.stroke();
+                ctx.textAlign = 'right';
+                ctx.fillText(e, padL - 10, y + 4);
+            }
+
+            // Axis Titles
+            ctx.fillStyle = '#e2e8f0';
+            ctx.font = 'bold 12px "Plus Jakarta Sans", sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('Mass number (A)  →', padL + plotW / 2, h - 10);
+
+            ctx.save();
+            ctx.translate(16, padT + plotH / 2);
+            ctx.rotate(-Math.PI / 2);
+            ctx.fillText('Binding energy per nucleon (MeV) →', 0, 0);
+            ctx.restore();
+
+            // Draw NCERT Binding Energy Curve Path
+            ctx.strokeStyle = '#38bdf8';
+            ctx.lineWidth = 3;
+            ctx.beginPath();
+            ncertCurvePoints.forEach((pt, idx) => {
+                const px = toX(pt.A);
+                const py = toY(pt.Ebn);
+                if (idx === 0) ctx.moveTo(px, py);
+                else ctx.lineTo(px, py);
+            });
+            ctx.stroke();
+
+            // Fission or Fusion Process Arrows
+            if (curveOverlayMode === 'fusion') {
+                const x1 = toX(2), y1 = toY(1.11);
+                const x2 = toX(4), y2 = toY(7.07);
+                ctx.strokeStyle = '#fbbf24';
+                ctx.lineWidth = 3;
+                ctx.setLineDash([5, 3]);
+                ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(x2, y2); ctx.stroke();
+                ctx.setLineDash([]);
+
+                ctx.fillStyle = 'rgba(245, 158, 11, 0.22)';
+                ctx.strokeStyle = '#fbbf24';
+                ctx.beginPath();
+                ctx.roundRect(padL + 45, padT + 12, 315, 48, 10);
+                ctx.fill(); ctx.stroke();
+                ctx.fillStyle = '#fde047';
+                ctx.font = 'bold 12px "Plus Jakarta Sans", sans-serif';
+                ctx.textAlign = 'left';
+                ctx.fillText('☀ NUCLEAR FUSION (A ≤ 10):', padL + 55, padT + 31);
+                ctx.fillStyle = '#ffffff';
+                ctx.font = '11px "Plus Jakarta Sans", sans-serif';
+                ctx.fillText('Light nuclei fuse to higher E_bn → Tightly bound → Energy Released!', padL + 55, padT + 49);
+            } else if (curveOverlayMode === 'fission') {
+                const xU = toX(238), yU = toY(7.60);
+                const xFrag = toX(120), yFrag = toY(8.50);
+                ctx.strokeStyle = '#f43f5e';
+                ctx.lineWidth = 3;
+                ctx.setLineDash([5, 3]);
+                ctx.beginPath(); ctx.moveTo(xU, yU); ctx.lineTo(xFrag, yFrag); ctx.stroke();
+                ctx.setLineDash([]);
+
+                ctx.fillStyle = 'rgba(244, 63, 94, 0.22)';
+                ctx.strokeStyle = '#f43f5e';
+                ctx.beginPath();
+                ctx.roundRect(w - 375, padT + 12, 335, 48, 10);
+                ctx.fill(); ctx.stroke();
+                ctx.fillStyle = '#fda4af';
+                ctx.font = 'bold 12px "Plus Jakarta Sans", sans-serif';
+                ctx.textAlign = 'left';
+                ctx.fillText('💥 NUCLEAR FISSION (A = 240 → 2 × 120):', w - 365, padT + 31);
+                ctx.fillStyle = '#ffffff';
+                ctx.font = '11px "Plus Jakarta Sans", sans-serif';
+                ctx.fillText('E_bn climbs from 7.6 to 8.5 MeV → +0.9 MeV/nucleon released!', w - 365, padT + 49);
+            }
+
+            // Plot Data Points & Labels
+            ncertCurvePoints.forEach(pt => {
+                const px = toX(pt.A);
+                const py = toY(pt.Ebn);
+                const isSelected = (pt.id === selectedCurvePt.id);
+
+                if (isSelected) {
+                    ctx.fillStyle = 'rgba(251, 191, 36, 0.32)';
+                    ctx.beginPath();
+                    ctx.arc(px, py, 13, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+
+                ctx.beginPath();
+                ctx.arc(px, py, isSelected ? 6.5 : 4.5, 0, Math.PI * 2);
+                ctx.fillStyle = isSelected ? '#fbbf24' : (pt.A === 56 ? '#10b981' : '#38bdf8');
+                ctx.fill();
+                ctx.strokeStyle = '#0f172a';
+                ctx.lineWidth = 1.5;
+                ctx.stroke();
+
+                ctx.fillStyle = isSelected ? '#fde047' : '#e2e8f0';
+                ctx.font = isSelected ? 'bold 12px "JetBrains Mono", monospace' : '11px "JetBrains Mono", monospace';
+                let ox = 6, oy = -7;
+                if (pt.id === '6Li') { ox = 8; oy = 12; }
+                if (pt.id === '14N') { ox = 6; oy = 14; }
+                if (pt.id === '18O') { ox = 6; oy = 13; }
+                if (pt.id === '4He') { ox = -26; oy = -6; }
+                ctx.textAlign = 'left';
+                ctx.fillText(pt.label, px + ox, py + oy);
+            });
+        }
+
+        // Click listener for Figure 13.1 Canvas
+        window.addEventListener('DOMContentLoaded', () => {
+            const c = document.getElementById('canvas-be-curve');
+            if (c) {
+                c.addEventListener('click', (e) => {
+                    const rect = c.getBoundingClientRect();
+                    const mx = e.clientX - rect.left;
+                    const my = e.clientY - rect.top;
+
+                    const padL = 58, padR = 28, padT = 28, padB = 48;
+                    const plotW = c.width - padL - padR;
+                    const plotH = c.height - padT - padB;
+                    const toX = (A) => padL + (A / 250) * plotW;
+                    const toY = (Ebn) => padT + plotH - (Ebn / 10) * plotH;
+
+                    let closest = null;
+                    let minDist = 35;
+                    ncertCurvePoints.forEach(pt => {
+                        const dx = mx - toX(pt.A);
+                        const dy = my - toY(pt.Ebn);
+                        const d = Math.hypot(dx, dy);
+                        if (d < minDist) {
+                            minDist = d;
+                            closest = pt;
+                        }
+                    });
+                    if (closest) selectCurvePoint(closest);
+                });
+            }
+        });
+
+        function setSaturationFocus(mode) {
+            saturationFocusMode = mode;
+            const btnInt = document.getElementById('sat-btn-interior');
+            const btnSurf = document.getElementById('sat-btn-surface');
+            if (mode === 'interior') {
+                btnInt.style.backgroundColor = 'var(--tab-active-bg)';
+                btnInt.style.color = 'var(--tab-active-text)';
+                btnSurf.style.backgroundColor = 'var(--bg-inset)';
+                btnSurf.style.color = 'var(--text-secondary)';
+            } else {
+                btnSurf.style.backgroundColor = 'var(--tab-active-bg)';
+                btnSurf.style.color = 'var(--tab-active-text)';
+                btnInt.style.backgroundColor = 'var(--bg-inset)';
+                btnInt.style.color = 'var(--text-secondary)';
+            }
+            drawSaturationCanvas();
+        }
+
+        function drawSaturationCanvas() {
+            const canvas = document.getElementById('canvas-saturation');
+            if (!canvas) return;
+            const rect = canvas.parentElement.getBoundingClientRect();
+            canvas.width = rect.width || 500;
+            canvas.height = rect.height || 220;
+            const ctx = canvas.getContext('2d');
+
+            const w = canvas.width;
+            const h = canvas.height;
+            ctx.clearRect(0, 0, w, h);
+
+            const cx = w * 0.35;
+            const cy = h * 0.5;
+            const spacing = 24;
+
+            const nodes = [];
+            for (let row = -3; row <= 3; row++) {
+                for (let col = -3; col <= 3; col++) {
+                    const x = cx + col * spacing + (row % 2 !== 0 ? spacing / 2 : 0);
+                    const y = cy + row * (spacing * 0.866);
+                    if (Math.hypot(x - cx, y - cy) <= 78) {
+                        nodes.push({ x, y, row, col });
+                    }
+                }
+            }
+
+            const target = saturationFocusMode === 'interior'
+                ? nodes.find(n => n.row === 0 && n.col === 0) || nodes[0]
+                : nodes.reduce((maxN, n) => (n.x > maxN.x ? n : maxN), nodes[0]);
+
+            const forceRange = spacing * 1.35;
+
+            ctx.fillStyle = 'rgba(16, 185, 129, 0.18)';
+            ctx.strokeStyle = '#10b981';
+            ctx.setLineDash([4, 4]);
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.arc(target.x, target.y, forceRange, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.stroke();
+            ctx.setLineDash([]);
+
+            let neighborCount = 0;
+            nodes.forEach(n => {
+                const dist = Math.hypot(n.x - target.x, n.y - target.y);
+                const isTarget = (n === target);
+                const isNeighbor = (!isTarget && dist <= forceRange);
+                if (isNeighbor) neighborCount++;
+
+                ctx.beginPath();
+                ctx.arc(n.x, n.y, 9.5, 0, Math.PI * 2);
+                if (isTarget) ctx.fillStyle = '#fbbf24';
+                else if (isNeighbor) ctx.fillStyle = '#10b981';
+                else ctx.fillStyle = '#334155';
+                ctx.fill();
+                ctx.strokeStyle = '#0f172a';
+                ctx.lineWidth = 1.5;
+                ctx.stroke();
+            });
+
+            const tx = w * 0.63;
+            ctx.fillStyle = '#ffffff';
+            ctx.font = 'bold 13px "Plus Jakarta Sans", sans-serif';
+            ctx.fillText(saturationFocusMode === 'interior' ? 'Interior Nucleon Selected' : 'Surface Nucleon Selected', tx, 55);
+
+            ctx.fillStyle = '#10b981';
+            ctx.font = 'bold 12px "JetBrains Mono", monospace';
+            ctx.fillText(`Active Neighbours (p) = ${neighborCount}`, tx, 82);
+
+            ctx.fillStyle = '#cbd5e1';
+            ctx.font = '12px "Plus Jakarta Sans", sans-serif';
+            ctx.fillText('Grey nucleons are outside', tx, 112);
+            ctx.fillText('the nuclear force range and', tx, 130);
+            ctx.fillText('contribute ZERO to binding!', tx, 148);
+
+            ctx.fillStyle = '#38bdf8';
+            ctx.font = 'bold 12px "JetBrains Mono", monospace';
+            ctx.fillText(`E_bn ≈ p·k (Constant!)`, tx, 180);
+        }
+
+        /* ------------------------------------------
+           TAB 5: 5 INTERACTIVE NUMERICAL PRACTICE QUESTIONS
+        ------------------------------------------ */
+        const practiceQuestions = [
+            {
+                id: 1,
+                badge: "Numerical • Section 13.3 (Nuclear Size & Density)",
+                question: "Two stable nuclei, Aluminium (²⁷₁₃Al) and Tellurium (¹²⁵₅₂Te), have mass numbers A₁ = 27 and A₂ = 125 respectively. (a) Calculate the ratio of their nuclear radii (R₁ / R₂) as a decimal. (b) What is the ratio of their nuclear densities (ρ₁ / ρ₂)?",
+                inputLabel: "Enter Ratio of Radii (R₁ / R₂):",
+                expectedAnswer: 0.6,
+                tolerance: 0.02,
+                unit: "(and ρ₁/ρ₂ = 1)",
+                hint: "Use Eq. 13.5: R = R₀ A^(1/3). Therefore R₁ / R₂ = (A₁ / A₂)^(1/3) = (27 / 125)^(1/3). Remember nuclear density is independent of A!",
+                solution: `
+                    <p class="font-bold text-sky-300">Step-by-Step NCERT Solution:</p>
+                    <p>1. By formula (Eq. 13.5), nuclear radius <span class="font-mono text-white">R = R<sub>0</sub> A<sup>1/3</sup></span>.</p>
+                    <p>2. Ratio of radii: <span class="font-mono text-amber-300">R<sub>1</sub> / R<sub>2</sub> = (A<sub>1</sub> / A<sub>2</sub>)<sup>1/3</sup> = (27 / 125)<sup>1/3</sup> = 3 / 5 = 0.6</span>.</p>
+                    <p>3. Since nuclear matter density <span class="font-mono text-emerald-300">&rho; &approx; 2.3 &times; 10<sup>17</sup> kg m<sup>&minus;3</sup></span> is constant and independent of mass number <span class="font-mono">A</span>, the ratio of their nuclear densities is <strong class="text-white">&rho;<sub>1</sub> / &rho;<sub>2</sub> = 1 : 1 = 1</strong>.</p>
+                `
+            },
+            {
+                id: 2,
+                badge: "Numerical • Section 13.4.1 (Mass–Energy Equivalence)",
+                question: "Using Einstein's mass-energy equivalence relation (E = mc²), calculate the energy equivalent of 2.5 g of matter if converted completely into energy. Express your answer in units of 10¹³ Joules (i.e., if E = X × 10¹³ J, enter X).",
+                inputLabel: "Enter value of X (× 10¹³ J):",
+                expectedAnswer: 22.5,
+                tolerance: 0.2,
+                unit: "× 10¹³ J",
+                hint: "First convert m = 2.5 g into kg: m = 2.5 × 10⁻³ kg. Then multiply by c² = (3 × 10⁸ m/s)² = 9 × 10¹⁶ m²/s².",
+                solution: `
+                    <p class="font-bold text-sky-300">Step-by-Step NCERT Solution:</p>
+                    <p>1. Given mass <span class="font-mono text-white">m = 2.5 g = 2.5 &times; 10<sup>&minus;3</sup> kg</span>, speed of light <span class="font-mono text-white">c = 3 &times; 10<sup>8</sup> m s<sup>&minus;1</sup></span>.</p>
+                    <p>2. According to Einstein's equation (Eq. 13.6): <span class="font-mono text-white">E = m c<sup>2</sup></span></p>
+                    <p>3. <span class="font-mono text-amber-300">E = 2.5 &times; 10<sup>&minus;3</sup> &times; (3 &times; 10<sup>8</sup>)<sup>2</sup> = 2.5 &times; 9 &times; 10<sup>13</sup> J = 22.5 &times; 10<sup>13</sup> J</span> (or <span class="font-mono">2.25 &times; 10<sup>14</sup> J</span>).</p>
+                `
+            },
+            {
+                id: 3,
+                badge: "Numerical • Section 13.4.2 (Mass Defect & E_bn of ⁵⁶Fe)",
+                question: "Calculate the binding energy per nucleon (E_bn) in MeV for Iron-56 (⁵⁶₂₆Fe). Given: Nuclear mass M(⁵⁶₂₆Fe) = 55.92067 u, mass of proton m_p = 1.00727 u, mass of neutron m_n = 1.00866 u, and 1 u = 931.5 MeV/c².",
+                inputLabel: "Enter E_bn (in MeV):",
+                expectedAnswer: 8.79,
+                tolerance: 0.08,
+                unit: "MeV/nucleon",
+                hint: "⁵⁶₂₆Fe has Z = 26 protons and (A - Z) = 30 neutrons. Find ΔM = [26(1.00727) + 30(1.00866)] - 55.92067 u. Multiply ΔM by 931.5 to get E_b, then divide by 56!",
+                solution: `
+                    <p class="font-bold text-sky-300">Step-by-Step NCERT Solution:</p>
+                    <p>1. Number of protons <span class="font-mono text-white">Z = 26</span>; Number of neutrons <span class="font-mono text-white">N = 56 &minus; 26 = 30</span>.</p>
+                    <p>2. Total mass of nucleons = <span class="font-mono text-white">26 &times; 1.00727 + 30 &times; 1.00866 = 26.18902 + 30.25980 = 56.44882 u</span>.</p>
+                    <p>3. Mass Defect <span class="font-mono text-amber-300">&Delta;M = 56.44882 &minus; 55.92067 = 0.52815 u</span>.</p>
+                    <p>4. Total Binding Energy <span class="font-mono text-white">E<sub>b</sub> = 0.52815 &times; 931.5 = 491.97 MeV</span>.</p>
+                    <p>5. Binding Energy per nucleon <span class="font-mono text-emerald-400">E<sub>bn</sub> = E<sub>b</sub> / 56 = 491.97 / 56 &approx; 8.785 MeV</span> (matches the ~8.75 MeV peak of Fig. 13.1!).</p>
+                `
+            },
+            {
+                id: 4,
+                badge: "Numerical • Section 13.4.2 (Binding Energy Curve & Fission)",
+                question: "A heavy nucleus X of mass number A = 240 has a binding energy per nucleon of 7.6 MeV. It splits (fissions) into two lighter nuclei Y and Z of mass numbers A₁ = 120 and A₂ = 120, each having a binding energy per nucleon of 8.5 MeV. Calculate the total energy released in the fission process (in MeV).",
+                inputLabel: "Enter Energy Released (in MeV):",
+                expectedAnswer: 216,
+                tolerance: 1,
+                unit: "MeV",
+                hint: "Initial total binding energy = 240 × 7.6 MeV. Final total binding energy = 240 × 8.5 MeV. Energy released = Final E_b − Initial E_b.",
+                solution: `
+                    <p class="font-bold text-sky-300">Step-by-Step NCERT Solution (Based on Conclusion iii):</p>
+                    <p>1. Initial Binding Energy of parent nucleus (<span class="font-mono">A = 240</span>): <span class="font-mono text-white">E<sub>b(initial)</sub> = 240 &times; 7.6 MeV = 1824 MeV</span>.</p>
+                    <p>2. Final Binding Energy of the two product nuclei (<span class="font-mono">2 &times; 120</span>): <span class="font-mono text-white">E<sub>b(final)</sub> = 240 &times; 8.5 MeV = 2040 MeV</span>.</p>
+                    <p>3. Since the final nucleons are more tightly bound by <span class="font-mono text-amber-300">8.5 &minus; 7.6 = 0.9 MeV/nucleon</span>, total energy released is:</p>
+                    <p class="font-mono text-emerald-400 font-bold">&Delta;E = 2040 &minus; 1824 = 216 MeV.</p>
+                `
+            },
+            {
+                id: 5,
+                badge: "Numerical • NCERT Exercise (Binding Energy of ¹⁴₇N)",
+                question: "Obtain the binding energy (E_b) of the Nitrogen nucleus (¹⁴₇N) in MeV. Given: Atomic mass m(¹⁴₇N) = 14.00307 u, mass of Hydrogen atom m_H = 1.00783 u, mass of neutron m_n = 1.00867 u, and 1 u = 931.5 MeV/c².",
+                inputLabel: "Enter Total Binding Energy E_b (in MeV):",
+                expectedAnswer: 104.7,
+                tolerance: 0.5,
+                unit: "MeV",
+                hint: "For ¹⁴₇N, Z = 7 and N = 7. Using atomic masses (electron masses cancel automatically): ΔM = [7 × 1.00783 + 7 × 1.00867] − 14.00307 u. Then E_b = ΔM × 931.5 MeV.",
+                solution: `
+                    <p class="font-bold text-sky-300">Step-by-Step NCERT Solution:</p>
+                    <p>1. A Nitrogen-14 (<span class="font-mono"><sup>14</sup><sub>7</sub>N</span>) nucleus contains <span class="font-mono text-white">7 protons and 7 neutrons</span>.</p>
+                    <p>2. Mass of 7 H-atoms + 7 neutrons = <span class="font-mono text-white">7(1.00783) + 7(1.00867) = 7.05481 + 7.06069 = 14.11550 u</span>.</p>
+                    <p>3. Mass Defect <span class="font-mono text-amber-300">&Delta;M = 14.11550 &minus; 14.00307 = 0.11243 u</span>.</p>
+                    <p>4. Total Binding Energy <span class="font-mono text-emerald-400 font-bold">E<sub>b</sub> = 0.11243 &times; 931.5 MeV = 104.73 MeV</span> (and <span class="font-mono">E<sub>bn</sub> = 104.73 / 14 = 7.48 MeV/nucleon</span>).</p>
+                `
+            }
+        ];
+
+        const solvedPracticeSet = new Set();
+
+        function renderPracticeQuestions() {
+            const container = document.getElementById('practice-questions-list');
+            if (!container) return;
+            container.innerHTML = '';
+
+            practiceQuestions.forEach((q, idx) => {
+                const card = document.createElement('div');
+                card.className = "glass-card rounded-2xl p-6 space-y-4";
+                card.style.borderLeft = "5px solid var(--accent-primary)";
+                card.innerHTML = `
+                    <div class="flex flex-wrap items-center justify-between gap-2">
+                        <span class="px-3 py-1 rounded-lg font-bold text-xs" style="background-color: var(--accent-primary-soft); color: var(--accent-primary);">${q.badge}</span>
+                        <span id="pq-status-${q.id}" class="text-xs font-mono text-slate-400">Question ${idx + 1} of 5</span>
+                    </div>
+                    <h3 class="font-display text-base sm:text-lg font-bold text-white leading-relaxed">
+                        Q${idx + 1}. ${q.question}
+                    </h3>
+                    <div class="flex flex-col sm:flex-row sm:items-center gap-3 pt-1">
+                        <label class="text-xs font-bold text-slate-300 shrink-0">${q.inputLabel}</label>
+                        <div class="flex items-center gap-2">
+                            <input type="number" step="any" id="pq-input-${q.id}" placeholder="Enter answer..." class="bg-slate-950 border border-slate-700 rounded-xl px-3.5 py-2 font-mono text-sm text-white focus:outline-none w-40">
+                            <span class="text-xs font-mono text-slate-400">${q.unit}</span>
+                            <button onclick="checkPracticeAnswer(${q.id})" class="px-4 py-2 rounded-xl font-extrabold text-xs transition shadow-sm"
+                                    style="background-color: var(--accent-primary); color: var(--tab-active-text);">
+                                Check Answer
+                            </button>
+                        </div>
+                        <div class="flex gap-2 sm:ml-auto">
+                            <button onclick="toggleElement('pq-hint-${q.id}')" class="px-3 py-2 rounded-xl bg-slate-800 text-amber-300 text-xs font-semibold transition">
+                                <i class="fa-regular fa-lightbulb mr-1"></i> Hint
+                            </button>
+                            <button onclick="toggleElement('pq-sol-${q.id}')" class="px-3 py-2 rounded-xl bg-slate-800 text-emerald-300 text-xs font-semibold transition">
+                                <i class="fa-solid fa-book-open mr-1"></i> Show Step-by-Step Solution
+                            </button>
+                        </div>
+                    </div>
+                    <div id="pq-feedback-${q.id}" class="hidden text-xs font-semibold p-3 rounded-xl"></div>
+                    <div id="pq-hint-${q.id}" class="hidden bg-amber-500/10 border border-amber-500/30 p-3.5 rounded-xl text-xs text-amber-300">
+                        <strong>Hint:</strong> ${q.hint}
+                    </div>
+                    <div id="pq-sol-${q.id}" class="hidden bg-slate-950/90 border border-slate-800 p-4 rounded-xl text-xs sm:text-sm text-slate-200 space-y-1.5">
+                        ${q.solution}
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function toggleElement(id) {
+            const el = document.getElementById(id);
+            if (el) el.classList.toggle('hidden');
+        }
+
+        function checkPracticeAnswer(id) {
+            const q = practiceQuestions.find(item => item.id === id);
+            const inputEl = document.getElementById(`pq-input-${id}`);
+            const fbEl = document.getElementById(`pq-feedback-${id}`);
+            const statusEl = document.getElementById(`pq-status-${id}`);
+
+            const val = parseFloat(inputEl.value);
+            fbEl.classList.remove('hidden');
+
+            if (!isNaN(val) && Math.abs(val - q.expectedAnswer) <= q.tolerance) {
+                fbEl.className = "text-xs font-semibold p-3 rounded-xl bg-emerald-500/20 border border-emerald-400/40 text-emerald-300";
+                fbEl.innerHTML = `<i class="fa-solid fa-circle-check mr-1"></i> Spot on! Correct numerical answer (${q.expectedAnswer} ${q.unit}).`;
+                statusEl.innerHTML = `<span class="text-emerald-400 font-bold"><i class="fa-solid fa-check"></i> Solved</span>`;
+                solvedPracticeSet.add(id);
+                document.getElementById('practice-progress-text').textContent = `${solvedPracticeSet.size} / 5`;
+                document.getElementById(`pq-sol-${id}`).classList.remove('hidden');
+            } else {
+                fbEl.className = "text-xs font-semibold p-3 rounded-xl bg-rose-500/20 border border-rose-400/40 text-rose-300";
+                fbEl.innerHTML = `<i class="fa-solid fa-circle-xmark mr-1"></i> Not quite right. Check the Hint or view the Step-by-Step Solution!`;
+            }
+        }
+
+        /* ------------------------------------------
+           TAB 6: 5-MCQ GAMIFIED QUIZ SESSION
+        ------------------------------------------ */
+        const mcqQuizData = [
+            {
+                tag: "MCQ 1 • Section 13.3 (Nuclear Density)",
+                question: "According to empirical measurements of nuclear size (R = R₀ A¹/³), how does the density of nuclear matter depend on the mass number A?",
+                options: [
+                    "It increases linearly with mass number A",
+                    "It is constant (~2.3 × 10¹⁷ kg m⁻³) and independent of A for all nuclei",
+                    "It decreases as A⁻¹/³ for heavier nuclei",
+                    "It is proportional to A¹/³"
+                ],
+                correctIndex: 1,
+                explanation: "Since nuclear volume V = (4/3)πR³ = (4/3)πR₀³A is proportional to A and nuclear mass M ≈ m·A is also proportional to A, their ratio (Density = Mass/Volume) is independent of A and remains constant at ~2.3 × 10¹⁷ kg m⁻³!"
+            },
+            {
+                tag: "MCQ 2 • Section 13.3 (Alpha Scattering)",
+                question: "In Geiger and Marsden's classic experiment, the distance of closest approach of a 5.5 MeV α-particle to a gold nucleus is about 4.0 × 10⁻¹⁴ m. What happens if α-particles of much higher energy (> 5.5 MeV) are used?",
+                options: [
+                    "The distance of closest approach increases",
+                    "Scattering continues to obey Rutherford's pure Coulomb formula at all energies",
+                    "The distance of closest approach becomes smaller and short-range nuclear forces begin to cause deviations from Rutherford's calculations",
+                    "The gold nucleus repels the α-particle via magnetic forces"
+                ],
+                correctIndex: 2,
+                explanation: "At energies higher than 5.5 MeV, the α-particle approaches closely enough to come within range of the short-range attractive nuclear forces, causing scattering to deviate from Rutherford's pure Coulomb repulsion formula."
+            },
+            {
+                tag: "MCQ 3 • Section 13.4.2 (Mass Defect & Energy Equivalent)",
+                question: "Based on NCERT Example 13.3, the mass defect (ΔM) of an Oxygen-16 (¹⁶₈O) nucleus is 0.13691 u. Given that 1 u ≈ 931.5 MeV/c², what is the total energy required to separate ¹⁶₈O into its individual protons and neutrons?",
+                options: [
+                    "7.97 MeV",
+                    "127.5 MeV",
+                    "931.5 MeV",
+                    "15.99 MeV"
+                ],
+                correctIndex: 1,
+                explanation: "Total Binding Energy E_b = ΔM × 931.5 MeV = 0.13691 × 931.5 = 127.5 MeV. (Note that 7.97 MeV is the binding energy per nucleon E_bn = 127.5 / 16)."
+            },
+            {
+                tag: "MCQ 4 • Section 13.4.2 (Binding Energy Curve Plateau)",
+                question: "The binding energy per nucleon (E_bn) is practically constant for nuclei of middle mass number (30 < A < 170) and reaches a maximum of ~8.75 MeV at A = 56 (⁵⁶Fe). This constancy of E_bn is a direct consequence of:",
+                options: [
+                    "Long-range gravitational attraction between nucleons",
+                    "Pure Coulomb repulsion between protons",
+                    "The short-ranged nature and saturation property of the nuclear force",
+                    "The orbital motion of electrons around the nucleus"
+                ],
+                correctIndex: 2,
+                explanation: "Because the nuclear force is short-ranged, a nucleon inside a large nucleus interacts only with its immediate p neighbours (contributing ~pk to binding energy). Adding more nucleons does not affect interior nucleons — this is the saturation property of nuclear force!"
+            },
+            {
+                tag: "MCQ 5 • Section 13.4.2 (Fission & Fusion on the Curve)",
+                question: "Which statement accurately explains why energy is released in both nuclear fission of heavy nuclei (A > 170) and nuclear fusion of very light nuclei (A ≤ 10)?",
+                options: [
+                    "In both processes, the product nuclei move toward the middle-mass region and have a higher binding energy per nucleon (more tightly bound) than the initial nuclei",
+                    "In both processes, the binding energy per nucleon decreases in the final state",
+                    "In both processes, the total mass of the final products is greater than the initial reactants",
+                    "Fission absorbs energy while only fusion releases energy"
+                ],
+                correctIndex: 0,
+                explanation: "Both light nuclei (A ≤ 10) and very heavy nuclei (A > 170) have lower E_bn than middle-mass nuclei. Whether light nuclei fuse or heavy nuclei split, the final system has a higher E_bn (is more tightly bound), releasing the difference as energy!"
+            }
+        ];
+
+        let quizIndex = 0;
+        let quizScore = 0;
+        let quizStreak = 0;
+        let quizBestStreak = 0;
+        let quizCorrectCount = 0;
+        let quizAnswered = false;
+
+        function renderQuizQuestion() {
+            quizAnswered = false;
+            const q = mcqQuizData[quizIndex];
+
+            document.getElementById('quiz-hud-qnum').textContent = `${quizIndex + 1} / ${mcqQuizData.length}`;
+            document.getElementById('quiz-progress-bar').style.width = `${((quizIndex + 1) / mcqQuizData.length) * 100}%`;
+            document.getElementById('quiz-q-tag').textContent = q.tag;
+            document.getElementById('quiz-q-text').textContent = q.question;
+            document.getElementById('quiz-feedback-box').classList.add('hidden');
+
+            const grid = document.getElementById('quiz-options-grid');
+            grid.innerHTML = '';
+
+            const letters = ['A', 'B', 'C', 'D'];
+            q.options.forEach((optText, idx) => {
+                const btn = document.createElement('button');
+                btn.id = `quiz-opt-${idx}`;
+                btn.className = "p-4 rounded-2xl bg-slate-900/90 border-2 border-slate-700/80 text-left transition flex items-start gap-3.5 group hover:opacity-90";
+                btn.onclick = () => selectQuizOption(idx);
+                btn.innerHTML = `
+                    <span class="w-8 h-8 rounded-xl bg-slate-800 font-mono font-extrabold text-sm flex items-center justify-center shrink-0 transition">
+                        ${letters[idx]}
+                    </span>
+                    <span class="text-sm text-slate-200 font-medium leading-snug pt-0.5">${optText}</span>
+                `;
+                grid.appendChild(btn);
+            });
+        }
+
+        function selectQuizOption(selectedIdx) {
+            if (quizAnswered) return;
+            quizAnswered = true;
+
+            const q = mcqQuizData[quizIndex];
+            const isCorrect = (selectedIdx === q.correctIndex);
+
+            for (let i = 0; i < q.options.length; i++) {
+                const btn = document.getElementById(`quiz-opt-${i}`);
+                btn.disabled = true;
+                if (i === q.correctIndex) {
+                    btn.className = "p-4 rounded-2xl bg-emerald-500/20 border-2 border-emerald-400 text-left flex items-start gap-3.5";
+                } else if (i === selectedIdx && !isCorrect) {
+                    btn.className = "p-4 rounded-2xl bg-rose-500/20 border-2 border-rose-400 text-left flex items-start gap-3.5";
+                } else {
+                    btn.className = "p-4 rounded-2xl bg-slate-900/40 border border-slate-800 opacity-50 text-left flex items-start gap-3.5";
+                }
+            }
+
+            const fbBox = document.getElementById('quiz-feedback-box');
+            const fbIcon = document.getElementById('quiz-feedback-icon');
+            const fbTitle = document.getElementById('quiz-feedback-title');
+            const fbText = document.getElementById('quiz-feedback-text');
+
+            fbBox.classList.remove('hidden');
+
+            if (isCorrect) {
+                quizCorrectCount++;
+                quizStreak++;
+                if (quizStreak > quizBestStreak) quizBestStreak = quizStreak;
+                quizScore += 100 + (quizStreak > 1 ? 25 : 0);
+
+                fbBox.className = "p-5 rounded-2xl bg-emerald-500/15 border border-emerald-400/40";
+                fbIcon.className = "fa-solid fa-circle-check text-2xl text-emerald-400 mt-0.5";
+                fbTitle.className = "font-display font-bold text-base text-emerald-300";
+                fbTitle.textContent = `Awesome! +${100 + (quizStreak > 1 ? 25 : 0)} XP`;
+            } else {
+                quizStreak = 0;
+                fbBox.className = "p-5 rounded-2xl bg-rose-500/15 border border-rose-400/40";
+                fbIcon.className = "fa-solid fa-circle-xmark text-2xl text-rose-400 mt-0.5";
+                fbTitle.className = "font-display font-bold text-base text-rose-300";
+                fbTitle.textContent = "Not quite right — Let's review the NCERT concept:";
+            }
+
+            fbText.textContent = q.explanation;
+
+            document.getElementById('quiz-hud-score').textContent = `${quizScore} XP`;
+            document.getElementById('quiz-hud-streak').textContent = `${quizStreak} 🔥`;
+
+            const nextBtn = document.getElementById('quiz-next-btn');
+            nextBtn.innerHTML = quizIndex === mcqQuizData.length - 1
+                ? `<span>Finish &amp; View Mastery Badge</span><i class="fa-solid fa-flag-checkered"></i>`
+                : `<span>Next Question</span><i class="fa-solid fa-arrow-right"></i>`;
+        }
+
+        function nextQuizQuestion() {
+            if (quizIndex < mcqQuizData.length - 1) {
+                quizIndex++;
+                renderQuizQuestion();
+            } else {
+                showQuizResults();
+            }
+        }
+
+        function showQuizResults() {
+            document.getElementById('quiz-question-container').classList.add('hidden');
+            const resScreen = document.getElementById('quiz-result-screen');
+            resScreen.classList.remove('hidden');
+
+            const accuracy = Math.round((quizCorrectCount / mcqQuizData.length) * 100);
+            document.getElementById('quiz-final-score').textContent = `${quizScore} XP`;
+            document.getElementById('quiz-final-accuracy').textContent = `${accuracy}% (${quizCorrectCount}/5)`;
+            document.getElementById('quiz-final-streak').textContent = `${quizBestStreak} 🔥`;
+
+            const heading = document.getElementById('quiz-final-heading');
+            if (quizCorrectCount === 5) heading.textContent = "Perfect Score! Grandmaster of Nuclear Physics!";
+            else if (quizCorrectCount >= 3) heading.textContent = "Great Job! Solid Command of Chapter 13!";
+            else heading.textContent = "Good Effort! Review the Interactive Tabs & Try Again!";
+        }
+
+        function restartQuiz() {
+            quizIndex = 0;
+            quizScore = 0;
+            quizStreak = 0;
+            quizBestStreak = 0;
+            quizCorrectCount = 0;
+            document.getElementById('quiz-hud-score').textContent = "0 XP";
+            document.getElementById('quiz-hud-streak').textContent = "0 🔥";
+            document.getElementById('quiz-result-screen').classList.add('hidden');
+            document.getElementById('quiz-question-container').classList.remove('hidden');
+            renderQuizQuestion();
+        }
+
+        /* ------------------------------------------
+           INITIALIZE EVERYTHING ON WINDOW LOAD & RESIZE
+        ------------------------------------------ */
+        window.onload = function () {
+            setThemePalette('terracotta');
+            updateSizeSimulation(56);
+            updateAlphaSim(5.5);
+            calculateMassEnergy();
+            updateBindingReadouts();
+            initCurvePills();
+            selectCurvePoint(ncertCurvePoints[9]); // 56Fe
+            drawSaturationCanvas();
+            renderPracticeQuestions();
+            renderQuizQuestion();
+        };
+
+        window.addEventListener('resize', () => {
+            drawNucleusSizeCanvas();
+            drawAlphaCanvas();
+            drawMassEnergyCanvas();
+            drawBindingScaleCanvas();
+            drawBindingEnergyCurve();
+            drawSaturationCanvas();
+        });
+    </script>
+</body>
+</html>
